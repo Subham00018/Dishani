@@ -86,7 +86,7 @@ export const colleges: College[] = [
     ranking: 10,
     feeStructure: 'Approx. ₹5.0 Lakhs per year',
     scholarships: ['Merit Scholarships', 'Merit-cum-Need Scholarships'],
-    courses: ['Computer Science', 'Electronics & Communication', 'Mechanical Engineering', 'Pharmacy'],
+    courses: ['Computer Science', 'Electronics & Communication', 'Mechanical Engineering', 'Pharmacy', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹18 LPA',
       overview: 'BITS Pilani offers excellent placements across its campuses, with a strong alumni network.',
@@ -176,7 +176,7 @@ export const colleges: College[] = [
     ranking: 9,
     feeStructure: 'Approx. ₹1.4 Lakhs per year (B.Tech)',
     scholarships: ['Central Sector Scheme, State schemes'],
-    courses: ['Metallurgical and Materials Engineering', 'Instrumentation and Control Engineering', 'Production Engineering', 'Chemical Engineering'],
+    courses: ['Metallurgical and Materials Engineering', 'Instrumentation and Control Engineering', 'Production Engineering', 'Chemical Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹12 LPA',
       overview: 'NIT Trichy is one of the top NITs with excellent academic and placement records.',
@@ -194,7 +194,7 @@ export const colleges: College[] = [
     ranking: 11,
     feeStructure: 'Approx. ₹10,000 - ₹30,000 per year (Highly Subsidized)',
     scholarships: ['State Government scholarships, University specific aids'],
-    courses: ['Power Engineering', 'Construction Engineering', 'Printing Engineering', 'Information Technology'],
+    courses: ['Power Engineering', 'Construction Engineering', 'Printing Engineering', 'Information Technology', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'Jadavpur University is known for its strong engineering programs and affordable education with good placements.',
@@ -212,7 +212,7 @@ export const colleges: College[] = [
     ranking: 12,
     feeStructure: 'Approx. ₹1.98 Lakhs per year (B.Tech Group A) to ₹3.95 Lakhs (B.Tech Group B)',
     scholarships: ['GV School Development Programme (GVSDP)', 'STARS scheme'],
-    courses: ['Information Technology', 'Computer Science and Engineering (Specialization in AI)', 'Electronics and Communication Engineering', 'Mechanical Engineering'],
+    courses: ['Information Technology', 'Computer Science and Engineering (Specialization in AI)', 'Electronics and Communication Engineering', 'Mechanical Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹9 LPA',
       highestPackage: '₹1.02 CPA',
@@ -232,7 +232,7 @@ export const colleges: College[] = [
     ranking: 13,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
     scholarships: ['Various central and state government scholarships'],
-    courses: ['Mining Engineering', 'Marine Structures', 'Computational and Data Science', 'Civil Engineering'],
+    courses: ['Mining Engineering', 'Marine Structures', 'Computational and Data Science', 'Civil Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹11 LPA',
       overview: 'NITK Surathkal is a premier NIT with a beautiful coastal campus and strong placement records.',
@@ -250,7 +250,7 @@ export const colleges: College[] = [
     ranking: 14,
     feeStructure: 'Approx. ₹50,000 - ₹60,000 per year (Govt. Quota)',
     scholarships: ['BC/MBC Scholarships, SC/ST Scholarships'],
-    courses: ['Geo-Informatics', 'Automobile Engineering', 'Manufacturing Engineering', 'Electronics and Instrumentation Engineering'],
+    courses: ['Geo-Informatics', 'Automobile Engineering', 'Manufacturing Engineering', 'Electronics and Instrumentation Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹7 LPA',
       overview: 'Anna University is a large technical university with many affiliated colleges. Placements vary by college.',
@@ -286,7 +286,7 @@ export const colleges: College[] = [
     ranking: 16,
     feeStructure: 'Approx. ₹1.3 Lakhs per year (B.Tech)',
     scholarships: ['Scholarships for SC/ST/OBC/Minority students'],
-    courses: ['Biotechnology', 'Chemical Engineering', 'Civil Engineering', 'Computer Science and Engineering'],
+    courses: ['Biotechnology', 'Chemical Engineering', 'Civil Engineering', 'Computer Science and Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'NIT Warangal is one of the oldest and most reputed NITs in India.',
@@ -366,7 +366,6 @@ export const colleges: College[] = [
     about: 'Indian Institute of Technology Ropar is a public technical university located in Rupnagar, Punjab, India. It is one of the eight newer Indian Institutes of Technology established by the Ministry of Human Resource Development, Government of India.',
     website: 'https://www.iitrpr.ac.in/'
   },
-  // Adding more colleges to reach ~50
   {
     id: 'iit-patna',
     name: 'IIT Patna',
@@ -413,7 +412,7 @@ export const colleges: College[] = [
     ranking: 23,
     feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech)',
     scholarships: ['Merit and need-based scholarships'],
-    courses: ['Ceramic Engineering', 'Food Process Engineering', 'Industrial Design', 'Biomedical Engineering'],
+    courses: ['Ceramic Engineering', 'Food Process Engineering', 'Industrial Design', 'Biomedical Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'NIT Rourkela offers a wide range of engineering disciplines and has good industry connections.',
@@ -449,7 +448,7 @@ export const colleges: College[] = [
     ranking: 25,
     feeStructure: 'Approx. ₹4.5 Lakhs per year (B.E./B.Tech)',
     scholarships: ['Merit based scholarships'],
-    courses: ['Biotechnology', 'Civil Engineering (with specialization)', 'Computer Science and Business Systems', 'Mechatronics'],
+    courses: ['Biotechnology', 'Civil Engineering (with specialization)', 'Computer Science and Business Systems', 'Mechatronics', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'Thapar Institute of Engineering and Technology is a well-regarded private engineering institution.',
@@ -467,7 +466,7 @@ export const colleges: College[] = [
     ranking: 26,
     feeStructure: 'Approx. ₹3.5 Lakhs per year (B.Tech)',
     scholarships: ['Amrita Entrance Examination based scholarships'],
-    courses: ['Aerospace Engineering', 'Automation and Robotics Engineering', 'Cyber Security', 'Electronics and Computer Engineering'],
+    courses: ['Aerospace Engineering', 'Automation and Robotics Engineering', 'Cyber Security', 'Electronics and Computer Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹7.5 LPA',
       overview: 'Amrita University has multiple campuses and offers a wide range of programs with decent placements.',
@@ -485,7 +484,7 @@ export const colleges: College[] = [
     ranking: 27,
     feeStructure: 'Approx. ₹2.5 - ₹4.5 Lakhs per year (B.Tech depending on specialization)',
     scholarships: ['SRMJEEE Rank based, Socio-economic scholarships'],
-    courses: ['Automobile Engineering with specialization in Electric Vehicles', 'Nanotechnology', 'Genetic Engineering', 'Software Engineering'],
+    courses: ['Automobile Engineering with specialization in Electric Vehicles', 'Nanotechnology', 'Genetic Engineering', 'Software Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹6 LPA',
       overview: 'SRM Institute of Science and Technology is a large private university with a high volume of placements.',
@@ -503,7 +502,7 @@ export const colleges: College[] = [
     ranking: 28,
     feeStructure: 'Approx. ₹1.4 Lakhs per year (B.Tech)',
     scholarships: ['National and State level scholarships'],
-    courses: ['Architecture', 'Engineering Physics', 'Materials Science and Engineering', 'Production Engineering'],
+    courses: ['Architecture', 'Engineering Physics', 'Materials Science and Engineering', 'Production Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹9.5 LPA',
       overview: 'NIT Calicut is a prominent engineering college in Kerala with good academic standards.',
@@ -539,7 +538,7 @@ export const colleges: College[] = [
     ranking: 30,
     feeStructure: 'Approx. ₹4.0 Lakhs per year (B.Tech)',
     scholarships: ['Merit-based scholarships for top rankers in MET'],
-    courses: ['Data Science and Engineering', 'Mechatronics Engineering', 'Aeronautical Engineering', 'Biomedical Engineering'],
+    courses: ['Data Science and Engineering', 'Mechatronics Engineering', 'Aeronautical Engineering', 'Biomedical Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹8 LPA',
       overview: 'MIT Manipal is a well-known private engineering college with a diverse student population.',
@@ -557,7 +556,7 @@ export const colleges: College[] = [
     ranking: 31,
     feeStructure: 'Approx. ₹90,000 per year (B.Tech)',
     scholarships: ['Government of Maharashtra scholarships'],
-    courses: ['Metallurgy and Material Technology', 'Instrumentation and Control', 'Production Engineering (Sandwich)', 'Robotics and Artificial Intelligence'],
+    courses: ['Metallurgy and Material Technology', 'Instrumentation and Control', 'Production Engineering (Sandwich)', 'Robotics and Artificial Intelligence', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹9 LPA',
       overview: 'College of Engineering, Pune is one of the oldest engineering colleges in Asia with a strong reputation.',
@@ -575,7 +574,7 @@ export const colleges: College[] = [
     ranking: 32,
     feeStructure: 'Approx. ₹3.6 Lakhs per year',
     scholarships: ['Pratibha scholarship (State govt.), Financial assistance schemes'],
-    courses: ['Computer Science and Engineering', 'Electronics and Communication Engineering', 'Computational Linguistics', 'Computer Science and Human Sciences'],
+    courses: ['Computer Science and Engineering', 'Electronics and Communication Engineering', 'Computational Linguistics', 'Computer Science and Human Sciences', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹30 LPA (CSE)',
       overview: 'International Institute of Information Technology, Hyderabad is renowned for its strong focus on CS and IT related research and education.',
@@ -593,7 +592,7 @@ export const colleges: College[] = [
     ranking: 33,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
     scholarships: ['Central and State Government schemes'],
-    courses: ['Industrial Engineering & Management', 'Information Technology', 'Production and Industrial Engineering', 'Electrical Engineering'],
+    courses: ['Industrial Engineering & Management', 'Information Technology', 'Production and Industrial Engineering', 'Electrical Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹9 LPA',
       overview: 'NIT Kurukshetra is a well-established NIT in North India with good placements.',
@@ -611,7 +610,7 @@ export const colleges: College[] = [
     ranking: 34,
     feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech)',
     scholarships: ['Various government scholarships for reserved categories'],
-    courses: ['Biotechnology', 'Chemical Engineering', 'Civil Engineering', 'Computer Science and Engineering'],
+    courses: ['Biotechnology', 'Chemical Engineering', 'Civil Engineering', 'Computer Science and Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹11 LPA',
       overview: 'Motilal Nehru National Institute of Technology Allahabad is a prominent NIT with strong academic programs.',
@@ -629,7 +628,7 @@ export const colleges: College[] = [
     ranking: 35,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
     scholarships: ['Scholarships for meritorious and economically weaker students'],
-    courses: ['Chemical Engineering', 'Civil Engineering', 'Computer Engineering', 'Electrical Engineering'],
+    courses: ['Chemical Engineering', 'Civil Engineering', 'Computer Engineering', 'Electrical Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹8.5 LPA',
       overview: 'Sardar Vallabhbhai National Institute of Technology, Surat is a respected NIT in Western India.',
@@ -665,7 +664,7 @@ export const colleges: College[] = [
     ranking: 37,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
     scholarships: ['Central and State scholarships'],
-    courses: ['Mining Engineering', 'Metallurgical and Materials Engineering', 'Architecture', 'Chemical Engineering'],
+    courses: ['Mining Engineering', 'Metallurgical and Materials Engineering', 'Architecture', 'Chemical Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹8 LPA',
       overview: 'Visvesvaraya National Institute of Technology, Nagpur is a well-established NIT.',
@@ -701,7 +700,7 @@ export const colleges: College[] = [
     ranking: 39,
     feeStructure: 'Approx. ₹2 Lakhs per year (B.E.)',
     scholarships: ['Merit scholarships, Post-matric scholarships'],
-    courses: ['Aerospace Engineering', 'Materials and Metallurgical Engineering', 'Production and Industrial Engineering', 'Civil Engineering'],
+    courses: ['Aerospace Engineering', 'Materials and Metallurgical Engineering', 'Production and Industrial Engineering', 'Civil Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹10.5 LPA',
       overview: 'Punjab Engineering College (Deemed to be University), Chandigarh, has a rich history and strong alumni network.',
@@ -719,7 +718,7 @@ export const colleges: College[] = [
     ranking: 40,
     feeStructure: 'Approx. ₹1.8 Lakhs per year (B.Tech)',
     scholarships: ['Various state and central government scholarships'],
-    courses: ['Information Technology', 'Electronics and Communication Engineering', 'IT (Business Informatics)', 'Robotics and Automation'],
+    courses: ['Information Technology', 'Electronics and Communication Engineering', 'IT (Business Informatics)', 'Robotics and Automation', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹20 LPA',
       overview: 'Indian Institute of Information Technology, Allahabad focuses on IT and related areas with excellent placement records.',
@@ -737,7 +736,7 @@ export const colleges: College[] = [
     ranking: 41,
     feeStructure: 'Approx. ₹1.7 Lakhs per year (B.Tech)',
     scholarships: ['Scholarship schemes for various categories'],
-    courses: ['Textile Technology', 'Industrial & Production Engineering', 'Instrumentation & Control Engineering', 'Bio Technology'],
+    courses: ['Textile Technology', 'Industrial & Production Engineering', 'Instrumentation & Control Engineering', 'Bio Technology', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹8 LPA',
       overview: 'Dr. B. R. Ambedkar National Institute of Technology Jalandhar is a public engineering university located in Jalandhar, Punjab, India.',
@@ -755,7 +754,7 @@ export const colleges: College[] = [
     ranking: 42,
     feeStructure: 'Approx. ₹1.8 Lakhs per year (B.Tech ICT)',
     scholarships: ['Merit and Merit-cum-Means scholarships'],
-    courses: ['Information and Communication Technology (ICT)', 'ICT with minor in Computational Science', 'Mathematics and Computing', 'Electronics and VLSI Design'],
+    courses: ['Information and Communication Technology (ICT)', 'ICT with minor in Computational Science', 'Mathematics and Computing', 'Electronics and VLSI Design', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹15 LPA',
       overview: 'Dhirubhai Ambani Institute of Information and Communication Technology is known for its specialized programs in ICT.',
@@ -773,7 +772,7 @@ export const colleges: College[] = [
     ranking: 43,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
     scholarships: ['Various scholarships for eligible students'],
-    courses: ['Civil Engineering', 'Computer Science and Engineering', 'Electronics and Communication Engineering', 'Mechanical Engineering'],
+    courses: ['Civil Engineering', 'Computer Science and Engineering', 'Electronics and Communication Engineering', 'Mechanical Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹7.5 LPA',
       overview: 'National Institute of Technology Silchar is an Institute of National Importance located in Silchar, Assam, India.',
@@ -791,7 +790,7 @@ export const colleges: College[] = [
     ranking: 44,
     feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech)',
     scholarships: ['Government and Institute scholarships'],
-    courses: ['Architecture', 'Chemical Engineering', 'Civil Engineering', 'Computer Science and Engineering'],
+    courses: ['Architecture', 'Chemical Engineering', 'Civil Engineering', 'Computer Science and Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'Malaviya National Institute of Technology Jaipur is a public technical university located in Jaipur, India with a focus on science, engineering and management.',
@@ -809,7 +808,7 @@ export const colleges: College[] = [
     ranking: 45,
     feeStructure: 'Approx. ₹5.0 Lakhs per year',
     scholarships: ['Merit Scholarships, Merit-cum-Need Scholarships based on BITSAT score'],
-    courses: ['Chemical Engineering', 'Civil Engineering', 'Computer Science', 'Electronics & Instrumentation'],
+    courses: ['Chemical Engineering', 'Civil Engineering', 'Computer Science', 'Electronics & Instrumentation', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹17 LPA',
       overview: 'BITS Pilani, Hyderabad Campus offers similar quality education and placement opportunities as the Pilani campus.',
@@ -827,7 +826,7 @@ export const colleges: College[] = [
     ranking: 46,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
     scholarships: ['Scholarships based on merit and category'],
-    courses: ['Planning', 'Chemical Engineering', 'Computer Science and Engineering', 'Electrical Engineering'],
+    courses: ['Planning', 'Chemical Engineering', 'Computer Science and Engineering', 'Electrical Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹8 LPA',
       overview: 'Maulana Azad National Institute of Technology Bhopal is an Institute of National Importance under Ministry of Education, Government of India.',
@@ -845,7 +844,7 @@ export const colleges: College[] = [
     ranking: 47,
     feeStructure: 'Approx. ₹1.7 Lakhs per year (IPG - M.Tech)',
     scholarships: ['Financial assistance schemes'],
-    courses: ['Integrated B.Tech (IT) and MBA', 'Integrated B.Tech (IT) and M.Tech (IT)', 'PhD Programs', 'Management Development Programs'],
+    courses: ['Integrated B.Tech (IT) and MBA', 'Integrated B.Tech (IT) and M.Tech (IT)', 'PhD Programs', 'Management Development Programs', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹14 LPA',
       overview: 'Indian Institute of Information Technology and Management Gwalior offers unique integrated programs in IT and Management.',
@@ -863,7 +862,7 @@ export const colleges: College[] = [
     ranking: 48,
     feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech)',
     scholarships: ['Multiple scholarship options available'],
-    courses: ['Biotechnology', 'Chemical Engineering', 'Computer Science and Engineering', 'Metallurgical and Materials Engineering'],
+    courses: ['Biotechnology', 'Chemical Engineering', 'Computer Science and Engineering', 'Metallurgical and Materials Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹7 LPA',
       overview: 'National Institute of Technology Durgapur is an institute of national importance in Durgapur, West Bengal, India.',
@@ -881,7 +880,7 @@ export const colleges: College[] = [
     ranking: 49,
     feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech)',
     scholarships: ['Merit cum Means EWS Scholarship, various private scholarships'],
-    courses: ['Automotive Engineering', 'Engineering Physics', 'Software Engineering', 'Mathematics and Computing'],
+    courses: ['Automotive Engineering', 'Engineering Physics', 'Software Engineering', 'Mathematics and Computing', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹13 LPA',
       overview: 'Delhi Technological University, formerly Delhi College of Engineering, is a state university in New Delhi, India.',
@@ -899,7 +898,7 @@ export const colleges: College[] = [
     ranking: 50,
     feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech)',
     scholarships: ['Post Matric Scholarships, Bihar Student Credit Card Scheme'],
-    courses: ['Architecture', 'Civil Engineering with specialization in Construction Technology', 'Computer Science & Engineering with specialization in Data Science', 'Electrical Engineering with specialization in Power System Engineering'],
+    courses: ['Architecture', 'Civil Engineering with specialization in Construction Technology', 'Computer Science & Engineering with specialization in Data Science', 'Electrical Engineering with specialization in Power System Engineering', 'Masters in Computer Applications'],
     placements: {
       averagePackage: '₹7.5 LPA',
       overview: 'National Institute of Technology Patna is the 18th National Institute of Technology created by the Ministry of H.R.D. Government of India after rechristening the erstwhile Bihar College of Engineering Patna.',
@@ -935,7 +934,7 @@ export const entranceExams: EntranceExam[] = [
     description: 'For admission to NITs, IIITs, and other Centrally Funded Technical Institutions (CFTIs), and as eligibility for JEE Advanced.',
     bannerImageUrl: 'https://placehold.co/800x300.png',
     dataAiHint: 'students writing exam',
-    relevantColleges: ['nit-trichy', 'nit-surathkal', 'nit-warangal', 'nit-calicut', 'nit-rourkela', 'mnnit-allahabad', 'svnit-surat', 'nit-kurukshetra', 'nit-jaipur', 'nit-bhopal', 'nit-nagpur', 'nit-jalandhar', 'nit-silchar', 'nit-durgapur', 'nit-patna', 'iiit-hyderabad', 'iiit-bangalore', 'iiit-allahabad', 'iiit-gwalior']
+    relevantColleges: ['nit-trichy', 'nit-surathkal', 'nit-warangal', 'nit-calicut', 'nit-rourkela', 'mnnit-allahabad', 'svnit-surat', 'nit-kurukshetra', 'nit-jaipur', 'nit-bhopal', 'nit-nagpur', 'nit-jalandhar', 'nit-silchar', 'nit-durgapur', 'nit-patna', 'iiit-hyderabad', 'iiit-bangalore', 'iiit-allahabad', 'iiit-gwalior', 'pec-chandigarh', 'dtu-delhi', 'iiest-shibpur']
   },
   {
     id: 'gate',
@@ -944,7 +943,7 @@ export const entranceExams: EntranceExam[] = [
     description: 'Graduate Aptitude Test in Engineering for Master\'s programs and PSU recruitment.',
     bannerImageUrl: 'https://placehold.co/800x300.png',
     dataAiHint: 'student studying computer',
-    relevantColleges: ['iit-bombay', 'iit-delhi', 'iisc-bangalore', 'iit-madras', 'iit-kanpur', 'iit-kharagpur', 'iit-roorkee', 'iit-guwahati']
+    relevantColleges: ['iit-bombay', 'iit-delhi', 'iisc-bangalore', 'iit-madras', 'iit-kanpur', 'iit-kharagpur', 'iit-roorkee', 'iit-guwahati', 'nit-trichy', 'nit-warangal', 'jadavpur-university', 'anna-university'] // Added some top non-IITs where GATE is relevant
   },
   {
     id: 'viteee',
@@ -954,6 +953,24 @@ export const entranceExams: EntranceExam[] = [
     bannerImageUrl: 'https://placehold.co/800x300.png',
     dataAiHint: 'exam paper check',
     relevantColleges: ['vit-vellore']
+  },
+  {
+    id: 'tancet',
+    name: 'TANCET 2025 (MCA)',
+    date: 'March 2025 (Tentative)',
+    description: 'Tamil Nadu Common Entrance Test for admission to M.B.A., M.C.A. & M.E./M.Tech./M.Arch./M.Plan. degree programmes offered at University Departments, Constituent colleges of Anna University, Annamalai University and Government & Government Aided Colleges in Tamil Nadu.',
+    bannerImageUrl: 'https://placehold.co/800x300.png',
+    dataAiHint: 'exam results',
+    relevantColleges: ['anna-university', 'nit-trichy', 'vit-vellore'] // Colleges in TN that accept TANCET for MCA
+  },
+  {
+    id: 'nimcet',
+    name: 'NIMCET 2025',
+    date: 'June 2025 (Tentative)',
+    description: 'NIT MCA Common Entrance Test, a National Level Test for admission into Master of Computer Applications programme in participating NITs.',
+    bannerImageUrl: 'https://placehold.co/800x300.png',
+    dataAiHint: 'computer lab exam',
+    relevantColleges: ['nit-trichy', 'nit-warangal', 'nit-surathkal', 'nit-calicut', 'mnnit-allahabad', 'nit-kurukshetra', 'nit-rourkela', 'nit-jaipur', 'nit-bhopal', 'nit-jalandhar', 'nit-durgapur', 'nit-patna'] // Many NITs offering MCA
   }
 ];
 
