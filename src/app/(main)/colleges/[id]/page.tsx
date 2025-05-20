@@ -6,11 +6,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { getCollegeById } from '@/lib/data';
-import type { College } from '@/lib/types';
+import type { College, CourseInfo } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Award, BookOpenCheck, Briefcase, DollarSign, ExternalLink, Globe, MapPin, Users } from 'lucide-react';
+import { ArrowLeft, Award, BookOpenCheck, Briefcase, DollarSign, ExternalLink, Globe, MapPin, Users, LocateIcon, Banknote } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 
 export default function CollegeDetailsPage() {
@@ -36,6 +36,7 @@ export default function CollegeDetailsPage() {
           </div>
           <div className="space-y-6">
             <Skeleton className="h-60 w-full" />
+            <Skeleton className="h-40 w-full" /> {/* Skeleton for Location card */}
           </div>
         </div>
       </div>
@@ -121,11 +122,20 @@ export default function CollegeDetailsPage() {
                 <CardTitle className="text-2xl flex items-center"><BookOpenCheck className="mr-3 h-6 w-6 text-primary" />Courses Offered</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 list-inside">
-                  {college.courses.map((course, index) => (
-                    <li key={index} className="flex items-center text-muted-foreground">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-4 w-4 text-accent shrink-0"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                      {course}
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 list-inside">
+                  {college.courses.map((course: CourseInfo, index: number) => (
+                    <li key={index} className="text-muted-foreground">
+                       <div className="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-4 w-4 text-accent shrink-0 mt-1"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                        <div className="flex-1">
+                            <span className="font-medium text-foreground">{course.name}</span>
+                            {course.fee && (
+                                <div className="flex items-center text-xs text-muted-foreground mt-0.5">
+                                    <Banknote className="mr-1 h-3 w-3" /> {course.fee}
+                                </div>
+                            )}
+                        </div>
+                       </div>
                     </li>
                   ))}
                 </ul>
@@ -157,11 +167,28 @@ export default function CollegeDetailsPage() {
           <div className="space-y-8 md:sticky md:top-24 self-start">
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl flex items-center"><DollarSign className="mr-3 h-6 w-6 text-primary" />Fee Structure</CardTitle>
+                <CardTitle className="text-2xl flex items-center"><LocateIcon className="mr-3 h-6 w-6 text-primary" />Location</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground mb-3">{college.location}</p>
+                <Button asChild variant="outline" className="w-full">
+                  <a 
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(college.name + ", " + college.location)}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    View on Map <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center"><DollarSign className="mr-3 h-6 w-6 text-primary" />Fee Structure Overview</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-semibold text-foreground">{college.feeStructure}</p>
-                <p className="text-sm text-muted-foreground mt-1">Note: Fees are subject to change. Please refer to the official college website for the most up-to-date information.</p>
+                <p className="text-sm text-muted-foreground mt-1">Note: Specific course fees are listed under "Courses Offered". Fees are subject to change. Please refer to the official college website for the most up-to-date information.</p>
               </CardContent>
             </Card>
 

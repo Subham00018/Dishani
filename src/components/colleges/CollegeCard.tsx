@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import type { College } from '@/lib/types';
+import type { College, CourseInfo } from '@/lib/types';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MapPin, BookOpenCheck, TrendingUp, CheckSquare, ArrowRight } from 'lucide-react';
@@ -52,15 +52,21 @@ export function CollegeCard({ college, isSelectedForCompare, onCompareSelect, co
           <div>
             <div className="flex items-center text-muted-foreground mb-1">
               <BookOpenCheck className="mr-2 h-4 w-4 text-accent shrink-0" />
-              <span className="font-medium text-foreground">Courses:</span>
+              <span className="font-medium text-foreground">Key Courses:</span>
             </div>
             <ul className="space-y-1 text-xs text-muted-foreground">
-              {college.courses.map((course, index) => (
+              {college.courses.slice(0, 3).map((course: CourseInfo, index: number) => ( // Display first 3 courses as a preview
                 <li key={index} className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-3.5 w-3.5 text-accent shrink-0 mt-0.5"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                  <span className="leading-tight">{course}</span>
+                  <span className="leading-tight">{course.name}</span>
                 </li>
               ))}
+              {college.courses.length > 3 && (
+                 <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-3.5 w-3.5 text-accent shrink-0 mt-0.5"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                    <span className="leading-tight">and {college.courses.length - 3} more...</span>
+                 </li>
+              )}
             </ul>
           </div>
           

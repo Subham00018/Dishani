@@ -4,7 +4,7 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { getCollegeById, colleges as allCollegesData } from '@/lib/data';
-import type { College } from '@/lib/types';
+import type { College, CourseInfo } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Select,
@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from '@/components/ui/button';
-import { ArrowLeftRight, Award, BookOpenCheck, Briefcase, DollarSign, Globe, MapPin, Users, Info } from 'lucide-react';
+import { ArrowLeftRight, Award, BookOpenCheck, Briefcase, DollarSign, Globe, MapPin, Users, Info, Banknote } from 'lucide-react';
 import Image from 'next/image';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -58,18 +58,24 @@ function ComparePageContent() {
     },
     { label: 'Location', icon: MapPin, key: 'location' },
     { label: 'Ranking', icon: Award, key: 'ranking', render: (college: College | null) => college?.ranking ? `#${college.ranking}` : 'N/A' },
-    { label: 'Fee Structure', icon: DollarSign, key: 'feeStructure' },
+    { label: 'Overall Fee Note', icon: DollarSign, key: 'feeStructure' },
     {
-      label: 'Key Courses', icon: BookOpenCheck, render: (college: College | null) => {
+      label: 'Key Courses & Fees', icon: BookOpenCheck, render: (college: College | null) => {
         if (!college || !college.courses || college.courses.length === 0) return <span className="text-muted-foreground">N/A</span>;
+        // Display first 3-4 courses with fees for brevity in comparison table
+        const coursesToShow = college.courses.slice(0, 4);
         return (
-          <ul className="space-y-1 text-left text-xs text-muted-foreground">
-            {college.courses.map((course, index) => (
+          <ul className="space-y-1.5 text-left text-xs text-muted-foreground">
+            {coursesToShow.map((course: CourseInfo, index: number) => (
               <li key={index} className="flex items-start">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-3.5 w-3.5 text-accent shrink-0 mt-0.5"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                <span>{course}</span>
+                <div>
+                  <span className="text-foreground">{course.name}</span>
+                  {course.fee && <div className="flex items-center text-xs text-muted-foreground/80"><Banknote className="mr-1 h-3 w-3"/>{course.fee}</div>}
+                </div>
               </li>
             ))}
+            {college.courses.length > 4 && <li>...and more.</li>}
           </ul>
         );
       }
@@ -184,4 +190,3 @@ export default function ComparePage() {
     </Suspense>
   );
 }
-

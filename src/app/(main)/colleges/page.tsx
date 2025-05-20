@@ -4,11 +4,11 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { colleges, entranceExams } from '@/lib/data';
-import type { College } from '@/lib/types';
+import type { College, CourseInfo } from '@/lib/types';
 import { EntranceExamBanner } from '@/components/colleges/EntranceExamBanner';
 import { CollegeCard } from '@/components/colleges/CollegeCard';
 import { Button } from '@/components/ui/button';
-import { GitCompareArrows, Search } from 'lucide-react';
+import { GitCompareArrows, Search, TrendingDown, TrendingUp } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import {
   Select,
@@ -20,9 +20,9 @@ import {
 import { useToast } from '@/hooks/use-toast';
 
 // Helper function to shorten course names for display in suggestions
-const shortenCourseName = (course: string): string => {
+const shortenCourseName = (courseName: string): string => {
   const MAX_DISPLAY_LENGTH = 40; // Maximum characters to display in suggestion list
-  let displayName = course;
+  let displayName = courseName;
 
   // Attempt to remove content in parentheses if it makes the name shorter and cleaner
   const parenthesisIndex = displayName.indexOf('(');
@@ -48,7 +48,7 @@ export default function CollegesPage() {
   const { toast } = useToast();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedForCompare, setSelectedForCompare] = useState<string[]>([]);
-  const [sortBy, setSortBy] = useState<string>('ranking'); // 'ranking', 'name'
+  const [sortBy, setSortBy] = useState<string>('ranking'); // 'ranking', 'name', 'coursesHighLow', 'coursesLowHigh'
 
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -70,9 +70,9 @@ export default function CollegesPage() {
       if (college.location.toLowerCase().includes(lowerSearchTerm)) {
         newSuggestionsSet.add(college.location);
       }
-      college.courses.forEach(course => {
-        if (course.toLowerCase().includes(lowerSearchTerm)) {
-          newSuggestionsSet.add(shortenCourseName(course)); // Use shortened name for suggestions
+      college.courses.forEach((course: CourseInfo) => {
+        if (course.name.toLowerCase().includes(lowerSearchTerm)) {
+          newSuggestionsSet.add(shortenCourseName(course.name)); // Use shortened name for suggestions
         }
       });
     });
@@ -123,7 +123,7 @@ export default function CollegesPage() {
       // Check against full college name, location, and full course names for filtering
       return college.name.toLowerCase().includes(lowerSearchTerm) ||
              college.location.toLowerCase().includes(lowerSearchTerm) ||
-             college.courses.some(course => course.toLowerCase().includes(lowerSearchTerm));
+             college.courses.some((course: CourseInfo) => course.name.toLowerCase().includes(lowerSearchTerm));
     })
     .sort((a, b) => {
       if (sortBy === 'ranking') {
@@ -131,6 +131,12 @@ export default function CollegesPage() {
       }
       if (sortBy === 'name') {
         return a.name.localeCompare(b.name);
+      }
+      if (sortBy === 'coursesHighLow') {
+        return (b.courses?.length || 0) - (a.courses?.length || 0);
+      }
+      if (sortBy === 'coursesLowHigh') {
+        return (a.courses?.length || 0) - (b.courses?.length || 0);
       }
       return 0;
     });
@@ -192,12 +198,22 @@ export default function CollegesPage() {
             )}
           </div>
           <Select value={sortBy} onValueChange={setSortBy}>
-            <SelectTrigger className="w-full md:w-[180px]">
+            <SelectTrigger className="w-full md:w-[220px]">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="ranking">Sort by Ranking</SelectItem>
               <SelectItem value="name">Sort by Name (A-Z)</SelectItem>
+              <SelectItem value="coursesHighLow">
+                <div className="flex items-center">
+                  <TrendingDown className="mr-2 h-4 w-4" /> Courses (High to Low)
+                </div>
+              </SelectItem>
+              <SelectItem value="coursesLowHigh">
+                 <div className="flex items-center">
+                  <TrendingUp className="mr-2 h-4 w-4" /> Courses (Low to High)
+                </div>
+              </SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -223,4 +239,3 @@ export default function CollegesPage() {
     </div>
   );
 }
-

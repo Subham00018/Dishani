@@ -1,5 +1,5 @@
 
-import type { College, EntranceExam } from './types';
+import type { College, EntranceExam, CourseInfo } from './types';
 
 export const colleges: College[] = [
   {
@@ -10,9 +10,15 @@ export const colleges: College[] = [
     dataAiHint: 'university campus',
     location: 'Mumbai, Maharashtra',
     ranking: 1,
-    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Merit-cum-Means Scholarship', 'Inspire Scholarship'],
-    courses: ['Computer Science', 'Mechanical Engineering', 'Electrical Engineering', 'Civil Engineering', 'Aerospace Engineering'],
+    courses: [
+      { name: 'Computer Science', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Mechanical Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Electrical Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Civil Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Aerospace Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹25 LPA',
       highestPackage: '₹3.67 CPA (International)',
@@ -30,9 +36,14 @@ export const colleges: College[] = [
     dataAiHint: 'college building',
     location: 'New Delhi, Delhi',
     ranking: 2,
-    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Merit-cum-Means Scholarship', 'Alumni Funded Scholarships'],
-    courses: ['Textile Technology', 'Computer Science', 'Biochemical Engineering', 'Mathematics and Computing'],
+    courses: [
+      { name: 'Textile Technology', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Biochemical Engineering', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Mathematics and Computing', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹24 LPA',
       highestPackage: '₹2 CPA (Domestic)',
@@ -49,9 +60,14 @@ export const colleges: College[] = [
     dataAiHint: 'research institute',
     location: 'Bengaluru, Karnataka',
     ranking: 3,
-    feeStructure: 'Approx. ₹30,000 - ₹70,000 per year (Course-dependent)',
+    feeStructure: 'Approx. ₹30,000 - ₹70,000 per year (Course-dependent). Research programs have different fee structures.',
     scholarships: ['KVPY Fellowship', 'IISc Scholarships'],
-    courses: ['Physics', 'Biology', 'Materials Engineering', 'Aerospace Engineering (Research)'],
+    courses: [
+      { name: 'Physics', fee: 'Approx. ₹40,000 per year (B.S. Research)' },
+      { name: 'Biology', fee: 'Approx. ₹40,000 per year (B.S. Research)' },
+      { name: 'Materials Engineering', fee: 'Fee varies by program level' },
+      { name: 'Aerospace Engineering (Research)', fee: 'Fee varies by program level' }
+    ],
     placements: {
       overview: 'IISc focuses on research and academia, with graduates often pursuing higher studies or R&D roles.',
     },
@@ -66,9 +82,14 @@ export const colleges: College[] = [
     dataAiHint: 'tech campus',
     location: 'Chennai, Tamil Nadu',
     ranking: 4,
-    feeStructure: 'Approx. ₹2.0 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.0 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Central Sector Scholarship', 'State Government Scholarships'],
-    courses: ['Naval Architecture', 'Ocean Engineering', 'Aerospace Engineering', 'Engineering Physics'],
+    courses: [
+      { name: 'Naval Architecture', fee: 'Approx. ₹2.0 Lakhs per year (B.Tech)' },
+      { name: 'Ocean Engineering', fee: 'Approx. ₹2.0 Lakhs per year (B.Tech)' },
+      { name: 'Aerospace Engineering', fee: 'Approx. ₹2.0 Lakhs per year (B.Tech)' },
+      { name: 'Engineering Physics', fee: 'Approx. ₹2.0 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹22 LPA',
       overview: 'IIT Madras is known for its strong focus on innovation and entrepreneurship, reflected in its placement trends.',
@@ -84,9 +105,15 @@ export const colleges: College[] = [
     dataAiHint: 'private university',
     location: 'Pilani, Rajasthan',
     ranking: 10,
-    feeStructure: 'Approx. ₹5.0 Lakhs per year',
+    feeStructure: 'Approx. ₹5.0 Lakhs per year. Fees vary by program.',
     scholarships: ['Merit Scholarships', 'Merit-cum-Need Scholarships'],
-    courses: ['Computer Science', 'Electronics & Communication', 'Mechanical Engineering', 'Pharmacy', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Computer Science', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
+      { name: 'Electronics & Communication', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
+      { name: 'Mechanical Engineering', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
+      { name: 'Pharmacy', fee: 'Approx. ₹4.5 Lakhs per year (B.Pharm)' },
+      { name: 'Masters in Computer Applications', fee: 'Contact university for MCA fees' }
+    ],
     placements: {
       averagePackage: '₹18 LPA',
       overview: 'BITS Pilani offers excellent placements across its campuses, with a strong alumni network.',
@@ -102,9 +129,14 @@ export const colleges: College[] = [
     dataAiHint: 'historic campus',
     location: 'Kanpur, Uttar Pradesh',
     ranking: 5,
-    feeStructure: 'Approx. ₹2.15 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.15 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Various Merit and Need-based scholarships'],
-    courses: ['Aerospace Engineering', 'Biological Sciences and Bioengineering', 'Chemical Engineering', 'Civil Engineering'],
+    courses: [
+      { name: 'Aerospace Engineering', fee: 'Approx. ₹2.15 Lakhs per year (B.Tech)' },
+      { name: 'Biological Sciences and Bioengineering', fee: 'Approx. ₹2.15 Lakhs per year (B.Tech)' },
+      { name: 'Chemical Engineering', fee: 'Approx. ₹2.15 Lakhs per year (B.Tech)' },
+      { name: 'Civil Engineering', fee: 'Approx. ₹2.15 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹23 LPA',
       overview: 'IIT Kanpur is known for its strong research focus and excellent placement opportunities.',
@@ -120,9 +152,14 @@ export const colleges: College[] = [
     dataAiHint: 'large campus',
     location: 'Kharagpur, West Bengal',
     ranking: 6,
-    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Merit-cum-Means, Alumni funded scholarships'],
-    courses: ['Agriculture and Food Engineering', 'Architecture and Regional Planning', 'Biotechnology', 'Mining Engineering'],
+    courses: [
+      { name: 'Agriculture and Food Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Architecture and Regional Planning', fee: 'Approx. ₹2.2 Lakhs per year (B.Arch)' },
+      { name: 'Biotechnology', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Mining Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹20 LPA',
       overview: 'Being the oldest IIT, it has a vast alumni network and consistent placement records.',
@@ -138,9 +175,14 @@ export const colleges: College[] = [
     dataAiHint: 'heritage building',
     location: 'Roorkee, Uttarakhand',
     ranking: 7,
-    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Institute Merit Scholarship, Inspire Scholarship'],
-    courses: ['Architecture', 'Pulp and Paper Technology', 'Earthquake Engineering', 'Polymer Science and Technology'],
+    courses: [
+      { name: 'Architecture', fee: 'Approx. ₹2.1 Lakhs per year (B.Arch)' },
+      { name: 'Pulp and Paper Technology', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Earthquake Engineering', fee: 'Fee varies by program level' },
+      { name: 'Polymer Science and Technology', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹19 LPA',
       overview: 'IIT Roorkee offers diverse engineering programs and has a good placement record.',
@@ -156,9 +198,14 @@ export const colleges: College[] = [
     dataAiHint: 'scenic campus',
     location: 'Guwahati, Assam',
     ranking: 8,
-    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Various government and private scholarships'],
-    courses: ['Design', 'Biosciences and Bioengineering', 'Chemical Science and Technology', 'Electronics and Electrical Engineering'],
+    courses: [
+      { name: 'Design', fee: 'Approx. ₹2.1 Lakhs per year (B.Des)' },
+      { name: 'Biosciences and Bioengineering', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Chemical Science and Technology', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Electronics and Electrical Engineering', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹18 LPA',
       overview: 'IIT Guwahati is known for its beautiful campus and growing prominence in research and placements.',
@@ -174,9 +221,15 @@ export const colleges: College[] = [
     dataAiHint: 'engineering college',
     location: 'Tiruchirappalli, Tamil Nadu',
     ranking: 9,
-    feeStructure: 'Approx. ₹1.4 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.4 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Central Sector Scheme, State schemes'],
-    courses: ['Metallurgical and Materials Engineering', 'Instrumentation and Control Engineering', 'Production Engineering', 'Chemical Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Metallurgical and Materials Engineering', fee: 'Approx. ₹1.4 Lakhs per year (B.Tech)' },
+      { name: 'Instrumentation and Control Engineering', fee: 'Approx. ₹1.4 Lakhs per year (B.Tech)' },
+      { name: 'Production Engineering', fee: 'Approx. ₹1.4 Lakhs per year (B.Tech)' },
+      { name: 'Chemical Engineering', fee: 'Approx. ₹1.4 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹90,000 per year' }
+    ],
     placements: {
       averagePackage: '₹12 LPA',
       overview: 'NIT Trichy is one of the top NITs with excellent academic and placement records.',
@@ -192,9 +245,16 @@ export const colleges: College[] = [
     dataAiHint: 'old university',
     location: 'Kolkata, West Bengal',
     ranking: 11,
-    feeStructure: 'Approx. ₹10,000 - ₹30,000 per year (Highly Subsidized)',
+    feeStructure: 'Approx. ₹10,000 - ₹30,000 per year (Highly Subsidized). Fees vary significantly by course.',
     scholarships: ['State Government scholarships, University specific aids'],
-    courses: ['Power Engineering', 'Construction Engineering', 'Printing Engineering', 'Information Technology', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
+    courses: [
+      { name: 'Power Engineering', fee: 'Approx. ₹2,400 per year (B.E.)' },
+      { name: 'Construction Engineering', fee: 'Approx. ₹2,400 per year (B.E.)' },
+      { name: 'Printing Engineering', fee: 'Approx. ₹2,400 per year (B.E.)' },
+      { name: 'Information Technology', fee: 'Approx. ₹2,400 per year (B.E.)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹30,000 total for 2 years' },
+      { name: 'Bachelor of Computer Applications', fee: 'Contact university for BCA fees' }
+    ],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'Jadavpur University is known for its strong engineering programs and affordable education with good placements.',
@@ -210,9 +270,16 @@ export const colleges: College[] = [
     dataAiHint: 'modern campus',
     location: 'Vellore, Tamil Nadu',
     ranking: 12,
-    feeStructure: 'Approx. ₹1.98 Lakhs per year (B.Tech Group A) to ₹3.95 Lakhs (B.Tech Group B)',
+    feeStructure: 'Approx. ₹1.98 Lakhs (Group A) to ₹3.95 Lakhs (Group B) per year for B.Tech. Other courses vary.',
     scholarships: ['GV School Development Programme (GVSDP)', 'STARS scheme'],
-    courses: ['Information Technology', 'Computer Science and Engineering (Specialization in AI)', 'Electronics and Communication Engineering', 'Mechanical Engineering', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
+    courses: [
+      { name: 'Information Technology', fee: 'Approx. ₹1.98 Lakhs per year (B.Tech Group A)' },
+      { name: 'Computer Science and Engineering (Specialization in AI)', fee: 'Approx. ₹3.95 Lakhs per year (B.Tech Group B)' },
+      { name: 'Electronics and Communication Engineering', fee: 'Approx. ₹1.98 Lakhs per year (B.Tech Group A)' },
+      { name: 'Mechanical Engineering', fee: 'Approx. ₹1.98 Lakhs per year (B.Tech Group A)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹1.4 Lakhs per year' },
+      { name: 'Bachelor of Computer Applications', fee: 'Approx. ₹1 Lakh per year' }
+    ],
     placements: {
       averagePackage: '₹9 LPA',
       highestPackage: '₹1.02 CPA',
@@ -230,9 +297,15 @@ export const colleges: College[] = [
     dataAiHint: 'coastal campus',
     location: 'Mangalore, Karnataka',
     ranking: 13,
-    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Various central and state government scholarships'],
-    courses: ['Mining Engineering', 'Marine Structures', 'Computational and Data Science', 'Civil Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Mining Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Marine Structures', fee: 'Fee varies by program level' },
+      { name: 'Computational and Data Science', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Civil Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹95,000 per year' }
+    ],
     placements: {
       averagePackage: '₹11 LPA',
       overview: 'NITK Surathkal is a premier NIT with a beautiful coastal campus and strong placement records.',
@@ -248,9 +321,15 @@ export const colleges: College[] = [
     dataAiHint: 'state university',
     location: 'Chennai, Tamil Nadu',
     ranking: 14,
-    feeStructure: 'Approx. ₹50,000 - ₹60,000 per year (Govt. Quota)',
+    feeStructure: 'Approx. ₹50,000 - ₹60,000 per year (Govt. Quota for B.E./B.Tech). Fees vary by course and college type.',
     scholarships: ['BC/MBC Scholarships, SC/ST Scholarships'],
-    courses: ['Geo-Informatics', 'Automobile Engineering', 'Manufacturing Engineering', 'Electronics and Instrumentation Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Geo-Informatics', fee: 'Approx. ₹55,000 per year (B.E.)' },
+      { name: 'Automobile Engineering', fee: 'Approx. ₹55,000 per year (B.E.)' },
+      { name: 'Manufacturing Engineering', fee: 'Approx. ₹55,000 per year (B.E.)' },
+      { name: 'Electronics and Instrumentation Engineering', fee: 'Approx. ₹55,000 per year (B.E.)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹41,000 per year (Govt. Quota)' }
+    ],
     placements: {
       averagePackage: '₹7 LPA',
       overview: 'Anna University is a large technical university with many affiliated colleges. Placements vary by college.',
@@ -266,9 +345,14 @@ export const colleges: College[] = [
     dataAiHint: 'new iit campus',
     location: 'Hyderabad, Telangana',
     ranking: 15,
-    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Institute SC/ST Scholarship, MCM scholarship'],
-    courses: ['Artificial Intelligence', 'Engineering Science', 'Biomedical Engineering', 'Materials Science and Metallurgical Engineering'],
+    courses: [
+      { name: 'Artificial Intelligence', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Engineering Science', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Biomedical Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Materials Science and Metallurgical Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹20 LPA',
       overview: 'IIT Hyderabad is one of the newer IITs but has quickly established a reputation for quality education and research.',
@@ -284,9 +368,15 @@ export const colleges: College[] = [
     dataAiHint: 'historic nit',
     location: 'Warangal, Telangana',
     ranking: 16,
-    feeStructure: 'Approx. ₹1.3 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.3 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Scholarships for SC/ST/OBC/Minority students'],
-    courses: ['Biotechnology', 'Chemical Engineering', 'Civil Engineering', 'Computer Science and Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Biotechnology', fee: 'Approx. ₹1.3 Lakhs per year (B.Tech)' },
+      { name: 'Chemical Engineering', fee: 'Approx. ₹1.3 Lakhs per year (B.Tech)' },
+      { name: 'Civil Engineering', fee: 'Approx. ₹1.3 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science and Engineering', fee: 'Approx. ₹1.3 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹85,000 per year' }
+    ],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'NIT Warangal is one of the oldest and most reputed NITs in India.',
@@ -302,9 +392,14 @@ export const colleges: College[] = [
     dataAiHint: 'modern architecture',
     location: 'Indore, Madhya Pradesh',
     ranking: 17,
-    feeStructure: 'Approx. ₹2.3 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.3 Lakhs per year (B.Tech).',
     scholarships: ['Merit-cum-Means Scholarship, Central Sector Scholarships'],
-    courses: ['Space Sciences and Engineering', 'Metallurgy Engineering and Materials Science', 'Electrical Engineering', 'Computer Science and Engineering'],
+    courses: [
+      { name: 'Space Sciences and Engineering', fee: 'Approx. ₹2.3 Lakhs per year (B.Tech)' },
+      { name: 'Metallurgy Engineering and Materials Science', fee: 'Approx. ₹2.3 Lakhs per year (B.Tech)' },
+      { name: 'Electrical Engineering', fee: 'Approx. ₹2.3 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science and Engineering', fee: 'Approx. ₹2.3 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹18 LPA',
       overview: 'IIT Indore has shown rapid growth in academic and research activities, leading to good placements.',
@@ -320,9 +415,14 @@ export const colleges: College[] = [
     dataAiHint: 'historic university',
     location: 'Varanasi, Uttar Pradesh',
     ranking: 18,
-    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech).',
     scholarships: ['Various internal and external scholarships'],
-    courses: ['Pharmaceutical Engineering & Technology', 'Ceramic Engineering', 'Mining Engineering', 'Biochemical Engineering'],
+    courses: [
+      { name: 'Pharmaceutical Engineering & Technology', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Ceramic Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Mining Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Biochemical Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹17 LPA',
       overview: 'IIT (BHU) has a long history and offers a wide range of engineering programs.',
@@ -338,9 +438,14 @@ export const colleges: College[] = [
     dataAiHint: 'chemical technology',
     location: 'Mumbai, Maharashtra',
     ranking: 19,
-    feeStructure: 'Approx. ₹85,000 per year (B.Tech)',
+    feeStructure: 'Approx. ₹85,000 per year (B.Tech). Varies for other courses.',
     scholarships: ['Merit based, Industry sponsored scholarships'],
-    courses: ['Chemical Engineering', 'Dyestuff Technology', 'Food Engineering and Technology', 'Pharmaceuticals Chemistry and Technology'],
+    courses: [
+      { name: 'Chemical Engineering', fee: 'Approx. ₹85,000 per year (B.Tech)' },
+      { name: 'Dyestuff Technology', fee: 'Approx. ₹85,000 per year (B.Tech)' },
+      { name: 'Food Engineering and Technology', fee: 'Approx. ₹85,000 per year (B.Tech)' },
+      { name: 'Pharmaceuticals Chemistry and Technology', fee: 'Approx. ₹85,000 per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹8 LPA',
       overview: 'Institute of Chemical Technology is a premier institute for chemical engineering and technology.',
@@ -356,9 +461,14 @@ export const colleges: College[] = [
     dataAiHint: 'new infrastructure',
     location: 'Rupnagar, Punjab',
     ranking: 20,
-    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech).',
     scholarships: ['MCM Scholarship, Institute Free Studentship'],
-    courses: ['Biomedical Engineering', 'Mathematics and Computing', 'Chemical Engineering', 'Mechanical Engineering'],
+    courses: [
+      { name: 'Biomedical Engineering', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Mathematics and Computing', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Chemical Engineering', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Mechanical Engineering', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹16 LPA',
       overview: 'IIT Ropar is among the newer IITs showing strong growth in placements and research output.',
@@ -374,9 +484,14 @@ export const colleges: College[] = [
     dataAiHint: 'developing campus',
     location: 'Patna, Bihar',
     ranking: 21,
-    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech).',
     scholarships: ['Various government scholarships'],
-    courses: ['AI and Data Science', 'Civil and Environmental Engineering', 'Computer Science', 'Electrical Engineering'],
+    courses: [
+      { name: 'AI and Data Science', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Civil and Environmental Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Electrical Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹15 LPA',
       overview: 'IIT Patna is steadily improving its academic and placement performance.',
@@ -392,9 +507,14 @@ export const colleges: College[] = [
     dataAiHint: 'historic engineering',
     location: 'Howrah, West Bengal',
     ranking: 22,
-    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech).',
     scholarships: ['Merit-cum-Means, Institute specific'],
-    courses: ['Aerospace Engineering', 'Civil Engineering', 'Computer Science and Technology', 'Mining Engineering'],
+    courses: [
+      { name: 'Aerospace Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Civil Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science and Technology', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Mining Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹9 LPA',
       overview: 'Indian Institute of Engineering Science and Technology, Shibpur has a long legacy in engineering education.',
@@ -410,9 +530,15 @@ export const colleges: College[] = [
     dataAiHint: 'industrial area campus',
     location: 'Rourkela, Odisha',
     ranking: 23,
-    feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Merit and need-based scholarships'],
-    courses: ['Ceramic Engineering', 'Food Process Engineering', 'Industrial Design', 'Biomedical Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Ceramic Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Food Process Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Industrial Design', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Biomedical Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹90,000 per year' }
+    ],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'NIT Rourkela offers a wide range of engineering disciplines and has good industry connections.',
@@ -428,9 +554,14 @@ export const colleges: College[] = [
     dataAiHint: 'sustainable campus',
     location: 'Gandhinagar, Gujarat',
     ranking: 24,
-    feeStructure: 'Approx. ₹2.3 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.3 Lakhs per year (B.Tech).',
     scholarships: ['Financial aid provided by the institute'],
-    courses: ['Society and Culture', 'Earth Sciences', 'Electrical Engineering', 'Mechanical Engineering'],
+    courses: [
+      { name: 'Society and Culture', fee: 'Fee varies, check website' }, // This is likely a humanities program
+      { name: 'Earth Sciences', fee: 'Approx. ₹2.3 Lakhs per year (B.Tech)' },
+      { name: 'Electrical Engineering', fee: 'Approx. ₹2.3 Lakhs per year (B.Tech)' },
+      { name: 'Mechanical Engineering', fee: 'Approx. ₹2.3 Lakhs per year (B.Tech)' }
+    ],
     placements: {
       averagePackage: '₹14 LPA',
       overview: 'IIT Gandhinagar focuses on interdisciplinary learning and has a growing placement record.',
@@ -446,9 +577,16 @@ export const colleges: College[] = [
     dataAiHint: 'private engineering college',
     location: 'Patiala, Punjab',
     ranking: 25,
-    feeStructure: 'Approx. ₹4.5 Lakhs per year (B.E./B.Tech)',
+    feeStructure: 'Approx. ₹4.5 Lakhs per year (B.E./B.Tech). BCA/MCA fees differ.',
     scholarships: ['Merit based scholarships'],
-    courses: ['Biotechnology', 'Civil Engineering (with specialization)', 'Computer Science and Business Systems', 'Mechatronics', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
+    courses: [
+      { name: 'Biotechnology', fee: 'Approx. ₹4.5 Lakhs per year (B.E.)' },
+      { name: 'Civil Engineering (with specialization)', fee: 'Approx. ₹4.5 Lakhs per year (B.E.)' },
+      { name: 'Computer Science and Business Systems', fee: 'Approx. ₹4.5 Lakhs per year (B.E.)' },
+      { name: 'Mechatronics', fee: 'Approx. ₹4.5 Lakhs per year (B.E.)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹2.0 Lakhs per year' },
+      { name: 'Bachelor of Computer Applications', fee: 'Approx. ₹1.8 Lakhs per year' }
+    ],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'Thapar Institute of Engineering and Technology is a well-regarded private engineering institution.',
@@ -464,9 +602,16 @@ export const colleges: College[] = [
     dataAiHint: 'spiritual campus',
     location: 'Coimbatore, Tamil Nadu',
     ranking: 26,
-    feeStructure: 'Approx. ₹3.5 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹3.5 Lakhs per year (B.Tech). BCA/MCA fees may differ.',
     scholarships: ['Amrita Entrance Examination based scholarships'],
-    courses: ['Aerospace Engineering', 'Automation and Robotics Engineering', 'Cyber Security', 'Electronics and Computer Engineering', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
+    courses: [
+      { name: 'Aerospace Engineering', fee: 'Approx. ₹3.5 Lakhs per year (B.Tech)' },
+      { name: 'Automation and Robotics Engineering', fee: 'Approx. ₹3.5 Lakhs per year (B.Tech)' },
+      { name: 'Cyber Security', fee: 'Approx. ₹3.5 Lakhs per year (B.Tech)' },
+      { name: 'Electronics and Computer Engineering', fee: 'Approx. ₹3.5 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹1.5 Lakhs per year' },
+      { name: 'Bachelor of Computer Applications', fee: 'Approx. ₹1.2 Lakhs per year' }
+    ],
     placements: {
       averagePackage: '₹7.5 LPA',
       overview: 'Amrita University has multiple campuses and offers a wide range of programs with decent placements.',
@@ -482,9 +627,16 @@ export const colleges: College[] = [
     dataAiHint: 'large private campus',
     location: 'Chennai, Tamil Nadu',
     ranking: 27,
-    feeStructure: 'Approx. ₹2.5 - ₹4.5 Lakhs per year (B.Tech depending on specialization)',
+    feeStructure: 'Approx. ₹2.5 - ₹4.5 Lakhs per year (B.Tech depending on specialization). BCA/MCA fees differ.',
     scholarships: ['SRMJEEE Rank based, Socio-economic scholarships'],
-    courses: ['Automobile Engineering with specialization in Electric Vehicles', 'Nanotechnology', 'Genetic Engineering', 'Software Engineering', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
+    courses: [
+      { name: 'Automobile Engineering with specialization in Electric Vehicles', fee: 'Approx. ₹3.0 Lakhs per year (B.Tech)' },
+      { name: 'Nanotechnology', fee: 'Approx. ₹4.5 Lakhs per year (B.Tech)' },
+      { name: 'Genetic Engineering', fee: 'Approx. ₹3.5 Lakhs per year (B.Tech)' },
+      { name: 'Software Engineering', fee: 'Approx. ₹4.0 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹2.0 Lakhs per year' },
+      { name: 'Bachelor of Computer Applications', fee: 'Approx. ₹1.5 Lakhs per year' }
+    ],
     placements: {
       averagePackage: '₹6 LPA',
       overview: 'SRM Institute of Science and Technology is a large private university with a high volume of placements.',
@@ -500,9 +652,15 @@ export const colleges: College[] = [
     dataAiHint: 'kerala campus',
     location: 'Kozhikode, Kerala',
     ranking: 28,
-    feeStructure: 'Approx. ₹1.4 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.4 Lakhs per year (B.Tech). B.Arch/MCA fees differ.',
     scholarships: ['National and State level scholarships'],
-    courses: ['Architecture', 'Engineering Physics', 'Materials Science and Engineering', 'Production Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Architecture', fee: 'Approx. ₹1.4 Lakhs per year (B.Arch)' },
+      { name: 'Engineering Physics', fee: 'Approx. ₹1.4 Lakhs per year (B.Tech)' },
+      { name: 'Materials Science and Engineering', fee: 'Approx. ₹1.4 Lakhs per year (B.Tech)' },
+      { name: 'Production Engineering', fee: 'Approx. ₹1.4 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹90,000 per year' }
+    ],
     placements: {
       averagePackage: '₹9.5 LPA',
       overview: 'NIT Calicut is a prominent engineering college in Kerala with good academic standards.',
@@ -518,9 +676,14 @@ export const colleges: College[] = [
     dataAiHint: 'mining institute',
     location: 'Dhanbad, Jharkhand',
     ranking: 29,
-    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech).',
     scholarships: ['Merit-cum-Means, Alumni scholarships'],
-    courses: ['Mining Engineering', 'Petroleum Engineering', 'Environmental Science and Engineering', 'Applied Geology'],
+    courses: [
+      { name: 'Mining Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Petroleum Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Environmental Science and Engineering', fee: 'Approx. ₹2.2 Lakhs per year (B.Tech)' },
+      { name: 'Applied Geology', fee: 'Fee varies, check website' }
+    ],
     placements: {
       averagePackage: '₹16 LPA',
       overview: 'Formerly Indian School of Mines, it excels in mining and earth sciences related engineering fields.',
@@ -536,9 +699,16 @@ export const colleges: College[] = [
     dataAiHint: 'international campus feel',
     location: 'Manipal, Karnataka',
     ranking: 30,
-    feeStructure: 'Approx. ₹4.0 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹4.0 Lakhs per year (B.Tech). BCA/MCA fees differ.',
     scholarships: ['Merit-based scholarships for top rankers in MET'],
-    courses: ['Data Science and Engineering', 'Mechatronics Engineering', 'Aeronautical Engineering', 'Biomedical Engineering', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
+    courses: [
+      { name: 'Data Science and Engineering', fee: 'Approx. ₹4.0 Lakhs per year (B.Tech)' },
+      { name: 'Mechatronics Engineering', fee: 'Approx. ₹4.0 Lakhs per year (B.Tech)' },
+      { name: 'Aeronautical Engineering', fee: 'Approx. ₹4.0 Lakhs per year (B.Tech)' },
+      { name: 'Biomedical Engineering', fee: 'Approx. ₹4.0 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹2.5 Lakhs per year' },
+      { name: 'Bachelor of Computer Applications', fee: 'Approx. ₹1.8 Lakhs per year' }
+    ],
     placements: {
       averagePackage: '₹8 LPA',
       overview: 'MIT Manipal is a well-known private engineering college with a diverse student population.',
@@ -554,9 +724,15 @@ export const colleges: College[] = [
     dataAiHint: 'historic pune college',
     location: 'Pune, Maharashtra',
     ranking: 31,
-    feeStructure: 'Approx. ₹90,000 per year (B.Tech)',
+    feeStructure: 'Approx. ₹90,000 per year (B.Tech). MCA fees differ.',
     scholarships: ['Government of Maharashtra scholarships'],
-    courses: ['Metallurgy and Material Technology', 'Instrumentation and Control', 'Production Engineering (Sandwich)', 'Robotics and Artificial Intelligence', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Metallurgy and Material Technology', fee: 'Approx. ₹90,000 per year (B.Tech)' },
+      { name: 'Instrumentation and Control', fee: 'Approx. ₹90,000 per year (B.Tech)' },
+      { name: 'Production Engineering (Sandwich)', fee: 'Approx. ₹90,000 per year (B.Tech)' },
+      { name: 'Robotics and Artificial Intelligence', fee: 'Approx. ₹90,000 per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹70,000 per year' }
+    ],
     placements: {
       averagePackage: '₹9 LPA',
       overview: 'College of Engineering, Pune is one of the oldest engineering colleges in Asia with a strong reputation.',
@@ -572,9 +748,15 @@ export const colleges: College[] = [
     dataAiHint: 'it focused institute',
     location: 'Hyderabad, Telangana',
     ranking: 32,
-    feeStructure: 'Approx. ₹3.6 Lakhs per year',
+    feeStructure: 'Approx. ₹3.6 Lakhs per year. Fees vary by program specialization.',
     scholarships: ['Pratibha scholarship (State govt.), Financial assistance schemes'],
-    courses: ['Computer Science and Engineering', 'Electronics and Communication Engineering', 'Computational Linguistics', 'Computer Science and Human Sciences', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Computer Science and Engineering', fee: 'Approx. ₹3.6 Lakhs per year (B.Tech)' },
+      { name: 'Electronics and Communication Engineering', fee: 'Approx. ₹3.6 Lakhs per year (B.Tech)' },
+      { name: 'Computational Linguistics', fee: 'Fee varies, check website' },
+      { name: 'Computer Science and Human Sciences', fee: 'Fee varies, check website' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹2.8 Lakhs per year' }
+    ],
     placements: {
       averagePackage: '₹30 LPA (CSE)',
       overview: 'International Institute of Information Technology, Hyderabad is renowned for its strong focus on CS and IT related research and education.',
@@ -590,9 +772,15 @@ export const colleges: College[] = [
     dataAiHint: 'north india nit',
     location: 'Kurukshetra, Haryana',
     ranking: 33,
-    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Central and State Government schemes'],
-    courses: ['Industrial Engineering & Management', 'Information Technology', 'Production and Industrial Engineering', 'Electrical Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Industrial Engineering & Management', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Information Technology', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Production and Industrial Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Electrical Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹88,000 per year' }
+    ],
     placements: {
       averagePackage: '₹9 LPA',
       overview: 'NIT Kurukshetra is a well-established NIT in North India with good placements.',
@@ -608,9 +796,15 @@ export const colleges: College[] = [
     dataAiHint: 'up nit campus',
     location: 'Prayagraj, Uttar Pradesh',
     ranking: 34,
-    feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Various government scholarships for reserved categories'],
-    courses: ['Biotechnology', 'Chemical Engineering', 'Civil Engineering', 'Computer Science and Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Biotechnology', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Chemical Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Civil Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science and Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹92,000 per year' }
+    ],
     placements: {
       averagePackage: '₹11 LPA',
       overview: 'Motilal Nehru National Institute of Technology Allahabad is a prominent NIT with strong academic programs.',
@@ -626,9 +820,15 @@ export const colleges: College[] = [
     dataAiHint: 'gujarat nit campus',
     location: 'Surat, Gujarat',
     ranking: 35,
-    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Scholarships for meritorious and economically weaker students'],
-    courses: ['Chemical Engineering', 'Civil Engineering', 'Computer Engineering', 'Electrical Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Chemical Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Civil Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Computer Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Electrical Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹85,000 per year' }
+    ],
     placements: {
       averagePackage: '₹8.5 LPA',
       overview: 'Sardar Vallabhbhai National Institute of Technology, Surat is a respected NIT in Western India.',
@@ -644,9 +844,14 @@ export const colleges: College[] = [
     dataAiHint: 'tech hub institute',
     location: 'Bengaluru, Karnataka',
     ranking: 36,
-    feeStructure: 'Approx. ₹5 Lakhs per year (Integrated M.Tech)',
+    feeStructure: 'Approx. ₹5 Lakhs per year (Integrated M.Tech). Fees vary significantly by specific program.',
     scholarships: ['Merit-based scholarships, Industry sponsored scholarships'],
-    courses: ['Integrated M.Tech in CSE', 'Integrated M.Tech in ECE', 'Master of Science by Research', 'PhD Programs'],
+    courses: [
+      { name: 'Integrated M.Tech in CSE', fee: 'Approx. ₹5 Lakhs per year' },
+      { name: 'Integrated M.Tech in ECE', fee: 'Approx. ₹5 Lakhs per year' },
+      { name: 'Master of Science by Research', fee: 'Fee varies, check website' },
+      { name: 'PhD Programs', fee: 'Fee varies, check website' }
+    ],
     placements: {
       averagePackage: '₹25 LPA',
       overview: 'International Institute of Information Technology Bangalore is known for its postgraduate programs and strong industry ties.',
@@ -662,9 +867,15 @@ export const colleges: College[] = [
     dataAiHint: 'maharashtra nit campus',
     location: 'Nagpur, Maharashtra',
     ranking: 37,
-    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech). B.Arch/MCA fees differ.',
     scholarships: ['Central and State scholarships'],
-    courses: ['Mining Engineering', 'Metallurgical and Materials Engineering', 'Architecture', 'Chemical Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Mining Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Metallurgical and Materials Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Architecture', fee: 'Approx. ₹1.5 Lakhs per year (B.Arch)' },
+      { name: 'Chemical Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹87,000 per year' }
+    ],
     placements: {
       averagePackage: '₹8 LPA',
       overview: 'Visvesvaraya National Institute of Technology, Nagpur is a well-established NIT.',
@@ -673,18 +884,23 @@ export const colleges: College[] = [
     website: 'https://vnit.ac.in/'
   },
   {
-    id: 'iit-ropar-alt', // Using alt id as iit-ropar already exists, adjust if needed
-    name: 'IIT Ropar (Alternate Entry)', // Placeholder name, adjust as needed
+    id: 'iit-ropar-alt',
+    name: 'IIT Ropar (Alternate Entry)',
     logoUrl: 'https://placehold.co/100x100.png',
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'punjab iit campus',
     location: 'Rupnagar, Punjab',
-    ranking: 38, // Adjust ranking
-    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech)',
+    ranking: 38,
+    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech).',
     scholarships: ['MCM Scholarship, Institute Free Studentship'],
-    courses: ['Civil Engineering', 'Electrical Engineering (VLSI Design and Technology)', 'Computer Science and Engineering (AI)', 'Mechanical Engineering (Manufacturing)'],
+    courses: [
+      { name: 'Civil Engineering', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Electrical Engineering (VLSI Design and Technology)', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science and Engineering (AI)', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Mechanical Engineering (Manufacturing)', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' }
+    ],
     placements: {
-      averagePackage: '₹16.5 LPA', // Slightly different data
+      averagePackage: '₹16.5 LPA',
       overview: 'IIT Ropar offers specialized tracks and shows consistent growth in industry collaborations.',
     },
     about: 'Indian Institute of Technology Ropar, a newer IIT, is rapidly establishing itself with innovative programs and research focus. It is located in Punjab, India.',
@@ -698,9 +914,15 @@ export const colleges: College[] = [
     dataAiHint: 'chandigarh engineering',
     location: 'Chandigarh',
     ranking: 39,
-    feeStructure: 'Approx. ₹2 Lakhs per year (B.E.)',
+    feeStructure: 'Approx. ₹2 Lakhs per year (B.E.). MCA fees differ.',
     scholarships: ['Merit scholarships, Post-matric scholarships'],
-    courses: ['Aerospace Engineering', 'Materials and Metallurgical Engineering', 'Production and Industrial Engineering', 'Civil Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Aerospace Engineering', fee: 'Approx. ₹2 Lakhs per year (B.E.)' },
+      { name: 'Materials and Metallurgical Engineering', fee: 'Approx. ₹2 Lakhs per year (B.E.)' },
+      { name: 'Production and Industrial Engineering', fee: 'Approx. ₹2 Lakhs per year (B.E.)' },
+      { name: 'Civil Engineering', fee: 'Approx. ₹2 Lakhs per year (B.E.)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹1.5 Lakhs per year' }
+    ],
     placements: {
       averagePackage: '₹10.5 LPA',
       overview: 'Punjab Engineering College (Deemed to be University), Chandigarh, has a rich history and strong alumni network.',
@@ -716,9 +938,15 @@ export const colleges: College[] = [
     dataAiHint: 'information technology institute',
     location: 'Prayagraj, Uttar Pradesh',
     ranking: 40,
-    feeStructure: 'Approx. ₹1.8 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.8 Lakhs per year (B.Tech). Fees for other programs may vary.',
     scholarships: ['Various state and central government scholarships'],
-    courses: ['Information Technology', 'Electronics and Communication Engineering', 'IT (Business Informatics)', 'Robotics and Automation', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Information Technology', fee: 'Approx. ₹1.8 Lakhs per year (B.Tech)' },
+      { name: 'Electronics and Communication Engineering', fee: 'Approx. ₹1.8 Lakhs per year (B.Tech)' },
+      { name: 'IT (Business Informatics)', fee: 'Approx. ₹1.8 Lakhs per year (B.Tech)' },
+      { name: 'Robotics and Automation', fee: 'Fee varies, check website' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹1.2 Lakhs per year' }
+    ],
     placements: {
       averagePackage: '₹20 LPA',
       overview: 'Indian Institute of Information Technology, Allahabad focuses on IT and related areas with excellent placement records.',
@@ -734,9 +962,15 @@ export const colleges: College[] = [
     dataAiHint: 'punjab nit',
     location: 'Jalandhar, Punjab',
     ranking: 41,
-    feeStructure: 'Approx. ₹1.7 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.7 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Scholarship schemes for various categories'],
-    courses: ['Textile Technology', 'Industrial & Production Engineering', 'Instrumentation & Control Engineering', 'Bio Technology', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Textile Technology', fee: 'Approx. ₹1.7 Lakhs per year (B.Tech)' },
+      { name: 'Industrial & Production Engineering', fee: 'Approx. ₹1.7 Lakhs per year (B.Tech)' },
+      { name: 'Instrumentation & Control Engineering', fee: 'Approx. ₹1.7 Lakhs per year (B.Tech)' },
+      { name: 'Bio Technology', fee: 'Approx. ₹1.7 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹95,000 per year' }
+    ],
     placements: {
       averagePackage: '₹8 LPA',
       overview: 'Dr. B. R. Ambedkar National Institute of Technology Jalandhar is a public engineering university located in Jalandhar, Punjab, India.',
@@ -752,9 +986,16 @@ export const colleges: College[] = [
     dataAiHint: 'ict university',
     location: 'Gandhinagar, Gujarat',
     ranking: 42,
-    feeStructure: 'Approx. ₹1.8 Lakhs per year (B.Tech ICT)',
+    feeStructure: 'Approx. ₹1.8 Lakhs per year (B.Tech ICT). BCA/MCA fees differ.',
     scholarships: ['Merit and Merit-cum-Means scholarships'],
-    courses: ['Information and Communication Technology (ICT)', 'ICT with minor in Computational Science', 'Mathematics and Computing', 'Electronics and VLSI Design', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
+    courses: [
+      { name: 'Information and Communication Technology (ICT)', fee: 'Approx. ₹1.8 Lakhs per year (B.Tech)' },
+      { name: 'ICT with minor in Computational Science', fee: 'Approx. ₹1.8 Lakhs per year (B.Tech)' },
+      { name: 'Mathematics and Computing', fee: 'Approx. ₹1.8 Lakhs per year (B.Tech)' },
+      { name: 'Electronics and VLSI Design', fee: 'Fee varies for M.Tech' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹1.5 Lakhs per year' },
+      { name: 'Bachelor of Computer Applications', fee: 'Approx. ₹1.2 Lakhs per year' }
+    ],
     placements: {
       averagePackage: '₹15 LPA',
       overview: 'Dhirubhai Ambani Institute of Information and Communication Technology is known for its specialized programs in ICT.',
@@ -770,9 +1011,15 @@ export const colleges: College[] = [
     dataAiHint: 'assam nit',
     location: 'Silchar, Assam',
     ranking: 43,
-    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Various scholarships for eligible students'],
-    courses: ['Civil Engineering', 'Computer Science and Engineering', 'Electronics and Communication Engineering', 'Mechanical Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Civil Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science and Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Electronics and Communication Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Mechanical Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹88,000 per year' }
+    ],
     placements: {
       averagePackage: '₹7.5 LPA',
       overview: 'National Institute of Technology Silchar is an Institute of National Importance located in Silchar, Assam, India.',
@@ -788,9 +1035,15 @@ export const colleges: College[] = [
     dataAiHint: 'rajasthan nit',
     location: 'Jaipur, Rajasthan',
     ranking: 44,
-    feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech). B.Arch/MCA fees differ.',
     scholarships: ['Government and Institute scholarships'],
-    courses: ['Architecture', 'Chemical Engineering', 'Civil Engineering', 'Computer Science and Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Architecture', fee: 'Approx. ₹1.6 Lakhs per year (B.Arch)' },
+      { name: 'Chemical Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Civil Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science and Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹90,000 per year' }
+    ],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'Malaviya National Institute of Technology Jaipur is a public technical university located in Jaipur, India with a focus on science, engineering and management.',
@@ -806,9 +1059,15 @@ export const colleges: College[] = [
     dataAiHint: 'bits campus south',
     location: 'Hyderabad, Telangana',
     ranking: 45,
-    feeStructure: 'Approx. ₹5.0 Lakhs per year',
+    feeStructure: 'Approx. ₹5.0 Lakhs per year. Fees vary by program.',
     scholarships: ['Merit Scholarships, Merit-cum-Need Scholarships based on BITSAT score'],
-    courses: ['Chemical Engineering', 'Civil Engineering', 'Computer Science', 'Electronics & Instrumentation', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Chemical Engineering', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
+      { name: 'Civil Engineering', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
+      { name: 'Computer Science', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
+      { name: 'Electronics & Instrumentation', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
+      { name: 'Masters in Computer Applications', fee: 'Contact university for MCA fees' }
+    ],
     placements: {
       averagePackage: '₹17 LPA',
       overview: 'BITS Pilani, Hyderabad Campus offers similar quality education and placement opportunities as the Pilani campus.',
@@ -824,9 +1083,15 @@ export const colleges: College[] = [
     dataAiHint: 'mp nit campus',
     location: 'Bhopal, Madhya Pradesh',
     ranking: 46,
-    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech). B.Plan/MCA fees differ.',
     scholarships: ['Scholarships based on merit and category'],
-    courses: ['Planning', 'Chemical Engineering', 'Computer Science and Engineering', 'Electrical Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Planning', fee: 'Approx. ₹1.5 Lakhs per year (B.Plan)' },
+      { name: 'Chemical Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science and Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Electrical Engineering', fee: 'Approx. ₹1.5 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹88,000 per year' }
+    ],
     placements: {
       averagePackage: '₹8 LPA',
       overview: 'Maulana Azad National Institute of Technology Bhopal is an Institute of National Importance under Ministry of Education, Government of India.',
@@ -842,9 +1107,15 @@ export const colleges: College[] = [
     dataAiHint: 'management tech institute',
     location: 'Gwalior, Madhya Pradesh',
     ranking: 47,
-    feeStructure: 'Approx. ₹1.7 Lakhs per year (IPG - M.Tech)',
+    feeStructure: 'Approx. ₹1.7 Lakhs per year (IPG - M.Tech). Fees for other programs vary.',
     scholarships: ['Financial assistance schemes'],
-    courses: ['Integrated B.Tech (IT) and MBA', 'Integrated B.Tech (IT) and M.Tech (IT)', 'PhD Programs', 'Management Development Programs', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Integrated B.Tech (IT) and MBA', fee: 'Approx. ₹1.7 Lakhs per year' },
+      { name: 'Integrated B.Tech (IT) and M.Tech (IT)', fee: 'Approx. ₹1.7 Lakhs per year' },
+      { name: 'PhD Programs', fee: 'Fee varies, check website' },
+      { name: 'Management Development Programs', fee: 'Fee varies, check website' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹1.1 Lakhs per year' }
+    ],
     placements: {
       averagePackage: '₹14 LPA',
       overview: 'Indian Institute of Information Technology and Management Gwalior offers unique integrated programs in IT and Management.',
@@ -860,9 +1131,15 @@ export const colleges: College[] = [
     dataAiHint: 'west bengal nit',
     location: 'Durgapur, West Bengal',
     ranking: 48,
-    feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Multiple scholarship options available'],
-    courses: ['Biotechnology', 'Chemical Engineering', 'Computer Science and Engineering', 'Metallurgical and Materials Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Biotechnology', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Chemical Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science and Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Metallurgical and Materials Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹90,000 per year' }
+    ],
     placements: {
       averagePackage: '₹7 LPA',
       overview: 'National Institute of Technology Durgapur is an institute of national importance in Durgapur, West Bengal, India.',
@@ -878,9 +1155,15 @@ export const colleges: College[] = [
     dataAiHint: 'delhi tech university',
     location: 'New Delhi, Delhi',
     ranking: 49,
-    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Merit cum Means EWS Scholarship, various private scholarships'],
-    courses: ['Automotive Engineering', 'Engineering Physics', 'Software Engineering', 'Mathematics and Computing', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Automotive Engineering', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Engineering Physics', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Software Engineering', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Mathematics and Computing', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹1.8 Lakhs per year' }
+    ],
     placements: {
       averagePackage: '₹13 LPA',
       overview: 'Delhi Technological University, formerly Delhi College of Engineering, is a state university in New Delhi, India.',
@@ -896,9 +1179,15 @@ export const colleges: College[] = [
     dataAiHint: 'bihar nit campus',
     location: 'Patna, Bihar',
     ranking: 50,
-    feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech)',
+    feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech). B.Arch/MCA fees differ.',
     scholarships: ['Post Matric Scholarships, Bihar Student Credit Card Scheme'],
-    courses: ['Architecture', 'Civil Engineering with specialization in Construction Technology', 'Computer Science & Engineering with specialization in Data Science', 'Electrical Engineering with specialization in Power System Engineering', 'Masters in Computer Applications'],
+    courses: [
+      { name: 'Architecture', fee: 'Approx. ₹1.6 Lakhs per year (B.Arch)' },
+      { name: 'Civil Engineering with specialization in Construction Technology', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Computer Science & Engineering with specialization in Data Science', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Electrical Engineering with specialization in Power System Engineering', fee: 'Approx. ₹1.6 Lakhs per year (B.Tech)' },
+      { name: 'Masters in Computer Applications', fee: 'Approx. ₹90,000 per year' }
+    ],
     placements: {
       averagePackage: '₹7.5 LPA',
       overview: 'National Institute of Technology Patna is the 18th National Institute of Technology created by the Ministry of H.R.D. Government of India after rechristening the erstwhile Bihar College of Engineering Patna.',
@@ -943,7 +1232,7 @@ export const entranceExams: EntranceExam[] = [
     description: 'Graduate Aptitude Test in Engineering for Master\'s programs and PSU recruitment.',
     bannerImageUrl: 'https://placehold.co/800x300.png',
     dataAiHint: 'student studying computer',
-    relevantColleges: ['iit-bombay', 'iit-delhi', 'iisc-bangalore', 'iit-madras', 'iit-kanpur', 'iit-kharagpur', 'iit-roorkee', 'iit-guwahati', 'nit-trichy', 'nit-warangal', 'jadavpur-university', 'anna-university'] // Added some top non-IITs where GATE is relevant
+    relevantColleges: ['iit-bombay', 'iit-delhi', 'iisc-bangalore', 'iit-madras', 'iit-kanpur', 'iit-kharagpur', 'iit-roorkee', 'iit-guwahati', 'nit-trichy', 'nit-warangal', 'jadavpur-university', 'anna-university']
   },
   {
     id: 'viteee',
@@ -961,7 +1250,7 @@ export const entranceExams: EntranceExam[] = [
     description: 'Tamil Nadu Common Entrance Test for admission to M.B.A., M.C.A. & M.E./M.Tech./M.Arch./M.Plan. degree programmes offered at University Departments, Constituent colleges of Anna University, Annamalai University and Government & Government Aided Colleges in Tamil Nadu.',
     bannerImageUrl: 'https://placehold.co/800x300.png',
     dataAiHint: 'exam results',
-    relevantColleges: ['anna-university', 'nit-trichy', 'vit-vellore'] // Colleges in TN that accept TANCET for MCA
+    relevantColleges: ['anna-university', 'nit-trichy', 'vit-vellore']
   },
   {
     id: 'nimcet',
@@ -970,13 +1259,9 @@ export const entranceExams: EntranceExam[] = [
     description: 'NIT MCA Common Entrance Test, a National Level Test for admission into Master of Computer Applications programme in participating NITs.',
     bannerImageUrl: 'https://placehold.co/800x300.png',
     dataAiHint: 'computer lab exam',
-    relevantColleges: ['nit-trichy', 'nit-warangal', 'nit-surathkal', 'nit-calicut', 'mnnit-allahabad', 'nit-kurukshetra', 'nit-rourkela', 'nit-jaipur', 'nit-bhopal', 'nit-jalandhar', 'nit-durgapur', 'nit-patna'] // Many NITs offering MCA
+    relevantColleges: ['nit-trichy', 'nit-warangal', 'nit-surathkal', 'nit-calicut', 'mnnit-allahabad', 'nit-kurukshetra', 'nit-rourkela', 'nit-jaipur', 'nit-bhopal', 'nit-jalandhar', 'nit-durgapur', 'nit-patna']
   }
 ];
 
 export const getCollegeById = (id: string): College | undefined => colleges.find(c => c.id === id);
 export const getExamById = (id: string): EntranceExam | undefined => entranceExams.find(e => e.id === id);
-
-    
-
-    

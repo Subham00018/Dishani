@@ -1,14 +1,21 @@
 
+export interface CourseInfo {
+  name: string;
+  fee?: string; // e.g., "₹2.2 Lakhs per year", "Fee varies"
+  duration?: string; // Optional: e.g., "4 Years", can be added later
+}
+
 export interface College {
   id: string;
   name: string;
-  logoUrl?: string; // Optional, can use a default
+  logoUrl?: string;
   campusPhotoUrl: string;
+  dataAiHint?: string;
   location: string;
-  ranking?: number; // Optional
-  feeStructure: string;
+  ranking?: number;
+  feeStructure: string; // Overall fee note for the college
   scholarships: string[];
-  courses: string[];
+  courses: CourseInfo[]; // Changed from string[]
   placements: {
     averagePackage?: string;
     highestPackage?: string;
@@ -25,5 +32,6 @@ export interface EntranceExam {
   date: string;
   description: string;
   bannerImageUrl: string;
+  dataAiHint?: string;
   relevantColleges?: string[]; // IDs of colleges
 }
