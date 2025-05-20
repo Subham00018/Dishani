@@ -5,13 +5,14 @@ import { usePathname, useRouter } from 'next/navigation';
 import { AppLogo } from '@/components/AppLogo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { LayoutGrid, GitCompareArrows, LogOut, Menu } from 'lucide-react';
+import { LayoutGrid, GitCompareArrows, LogOut, Menu, Home } from 'lucide-react'; // Added Home icon
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from 'react';
 
 
 const navLinks = [
+  { href: '/home', label: 'Home', icon: Home }, // Added Home link
   { href: '/colleges', label: 'Colleges', icon: LayoutGrid },
   { href: '/compare', label: 'Compare', icon: GitCompareArrows },
 ];
@@ -42,7 +43,7 @@ export function AppHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
-        <Link href="/colleges" className="flex items-center space-x-2">
+        <Link href="/home" className="flex items-center space-x-2"> {/* AppLogo now links to /home */}
           <AppLogo appName="EduCompare India" />
         </Link>
 
@@ -78,7 +79,7 @@ export function AppHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs p-6 bg-background">
               <div className="flex flex-col space-y-4">
-                <Link href="/colleges" className="flex items-center space-x-2 mb-4" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/home" className="flex items-center space-x-2 mb-4" onClick={() => setIsMobileMenuOpen(false)}> {/* AppLogo now links to /home */}
                   <AppLogo appName="EduCompare India" />
                 </Link>
                 <Separator />

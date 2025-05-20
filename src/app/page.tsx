@@ -7,7 +7,7 @@ export default function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/login');
+    router.replace('/home'); // Updated to redirect to /home
   }, [router]);
 
   return null; // Or a loading spinner
