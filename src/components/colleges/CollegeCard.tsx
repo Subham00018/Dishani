@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import type { College } from '@/lib/types';
@@ -48,9 +49,12 @@ export function CollegeCard({ college, isSelectedForCompare, onCompareSelect, co
         <p className="text-sm text-muted-foreground mb-2 line-clamp-2">{college.about.substring(0,100)}...</p>
 
         <div className="space-y-1 text-sm mb-3">
-          <div className="flex items-center text-muted-foreground">
-            <BookOpenCheck className="mr-2 h-4 w-4 text-accent" />
-            <span className="font-medium text-foreground mr-1">Courses:</span> {college.courses.slice(0, 2).join(', ')}...
+          <div className="flex items-start text-muted-foreground"> {/* Changed items-center to items-start for better alignment if text wraps */}
+            <BookOpenCheck className="mr-2 h-4 w-4 text-accent shrink-0 mt-1" /> {/* Added shrink-0 and mt-1 for alignment */}
+            <div>
+              <span className="font-medium text-foreground mr-1">Courses:</span> 
+              {college.courses.join(', ')}
+            </div>
           </div>
           <div className="flex items-center text-muted-foreground">
             <TrendingUp className="mr-2 h-4 w-4 text-accent" />
