@@ -19,6 +19,30 @@ import {
 } from "@/components/ui/select";
 import { useToast } from '@/hooks/use-toast';
 
+// Helper function to shorten course names for display in suggestions
+const shortenCourseName = (course: string): string => {
+  const MAX_DISPLAY_LENGTH = 40; // Maximum characters to display in suggestion list
+  let displayName = course;
+
+  // Attempt to remove content in parentheses if it makes the name shorter and cleaner
+  const parenthesisIndex = displayName.indexOf('(');
+  if (parenthesisIndex > 0) {
+    const partBeforeParenthesis = displayName.substring(0, parenthesisIndex).trim();
+    // Only use this if it's significantly shorter or the part in parenthesis seems like a generic add-on
+    if (partBeforeParenthesis.length < displayName.length - 5 && partBeforeParenthesis.length > 0) {
+        displayName = partBeforeParenthesis;
+    }
+  }
+  
+  // If still too long after trying to remove parentheses content, or if no parentheses, truncate.
+  if (displayName.length > MAX_DISPLAY_LENGTH) {
+    displayName = displayName.substring(0, MAX_DISPLAY_LENGTH - 3).trimEnd() + '...';
+  }
+  
+  return displayName;
+};
+
+
 export default function CollegesPage() {
   const router = useRouter();
   const { toast } = useToast();
@@ -48,7 +72,7 @@ export default function CollegesPage() {
       }
       college.courses.forEach(course => {
         if (course.toLowerCase().includes(lowerSearchTerm)) {
-          newSuggestionsSet.add(course);
+          newSuggestionsSet.add(shortenCourseName(course)); // Use shortened name for suggestions
         }
       });
     });
@@ -94,11 +118,13 @@ export default function CollegesPage() {
   };
 
   const filteredColleges = colleges
-    .filter((college) =>
-      college.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      college.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      college.courses.some(course => course.toLowerCase().includes(searchTerm.toLowerCase()))
-    )
+    .filter((college) => {
+      const lowerSearchTerm = searchTerm.toLowerCase();
+      // Check against full college name, location, and full course names for filtering
+      return college.name.toLowerCase().includes(lowerSearchTerm) ||
+             college.location.toLowerCase().includes(lowerSearchTerm) ||
+             college.courses.some(course => course.toLowerCase().includes(lowerSearchTerm));
+    })
     .sort((a, b) => {
       if (sortBy === 'ranking') {
         return (a.ranking || Infinity) - (b.ranking || Infinity);
@@ -197,3 +223,4 @@ export default function CollegesPage() {
     </div>
   );
 }
+
