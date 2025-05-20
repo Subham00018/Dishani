@@ -2,11 +2,12 @@
 'use client';
 
 import Link from 'next/link';
-import { colleges } from '@/lib/data';
+import { colleges, entranceExams } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { GraduationCap, BookOpenCheck, Users, ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { EntranceExamBanner } from '@/components/colleges/EntranceExamBanner';
 
 export default function DashboardHomePage() {
   const [totalColleges, setTotalColleges] = useState(0);
@@ -59,6 +60,10 @@ export default function DashboardHomePage() {
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
           Your ultimate guide to discovering, comparing, and choosing the best educational path. Explore detailed information on India's top colleges.
         </p>
+      </section>
+
+      <section className="mb-12">
+        <EntranceExamBanner exams={entranceExams} />
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
