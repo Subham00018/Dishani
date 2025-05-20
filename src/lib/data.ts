@@ -194,7 +194,7 @@ export const colleges: College[] = [
     ranking: 11,
     feeStructure: 'Approx. ₹10,000 - ₹30,000 per year (Highly Subsidized)',
     scholarships: ['State Government scholarships, University specific aids'],
-    courses: ['Power Engineering', 'Construction Engineering', 'Printing Engineering', 'Information Technology', 'Masters in Computer Applications'],
+    courses: ['Power Engineering', 'Construction Engineering', 'Printing Engineering', 'Information Technology', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'Jadavpur University is known for its strong engineering programs and affordable education with good placements.',
@@ -212,7 +212,7 @@ export const colleges: College[] = [
     ranking: 12,
     feeStructure: 'Approx. ₹1.98 Lakhs per year (B.Tech Group A) to ₹3.95 Lakhs (B.Tech Group B)',
     scholarships: ['GV School Development Programme (GVSDP)', 'STARS scheme'],
-    courses: ['Information Technology', 'Computer Science and Engineering (Specialization in AI)', 'Electronics and Communication Engineering', 'Mechanical Engineering', 'Masters in Computer Applications'],
+    courses: ['Information Technology', 'Computer Science and Engineering (Specialization in AI)', 'Electronics and Communication Engineering', 'Mechanical Engineering', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
     placements: {
       averagePackage: '₹9 LPA',
       highestPackage: '₹1.02 CPA',
@@ -448,7 +448,7 @@ export const colleges: College[] = [
     ranking: 25,
     feeStructure: 'Approx. ₹4.5 Lakhs per year (B.E./B.Tech)',
     scholarships: ['Merit based scholarships'],
-    courses: ['Biotechnology', 'Civil Engineering (with specialization)', 'Computer Science and Business Systems', 'Mechatronics', 'Masters in Computer Applications'],
+    courses: ['Biotechnology', 'Civil Engineering (with specialization)', 'Computer Science and Business Systems', 'Mechatronics', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
     placements: {
       averagePackage: '₹10 LPA',
       overview: 'Thapar Institute of Engineering and Technology is a well-regarded private engineering institution.',
@@ -466,7 +466,7 @@ export const colleges: College[] = [
     ranking: 26,
     feeStructure: 'Approx. ₹3.5 Lakhs per year (B.Tech)',
     scholarships: ['Amrita Entrance Examination based scholarships'],
-    courses: ['Aerospace Engineering', 'Automation and Robotics Engineering', 'Cyber Security', 'Electronics and Computer Engineering', 'Masters in Computer Applications'],
+    courses: ['Aerospace Engineering', 'Automation and Robotics Engineering', 'Cyber Security', 'Electronics and Computer Engineering', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
     placements: {
       averagePackage: '₹7.5 LPA',
       overview: 'Amrita University has multiple campuses and offers a wide range of programs with decent placements.',
@@ -484,7 +484,7 @@ export const colleges: College[] = [
     ranking: 27,
     feeStructure: 'Approx. ₹2.5 - ₹4.5 Lakhs per year (B.Tech depending on specialization)',
     scholarships: ['SRMJEEE Rank based, Socio-economic scholarships'],
-    courses: ['Automobile Engineering with specialization in Electric Vehicles', 'Nanotechnology', 'Genetic Engineering', 'Software Engineering', 'Masters in Computer Applications'],
+    courses: ['Automobile Engineering with specialization in Electric Vehicles', 'Nanotechnology', 'Genetic Engineering', 'Software Engineering', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
     placements: {
       averagePackage: '₹6 LPA',
       overview: 'SRM Institute of Science and Technology is a large private university with a high volume of placements.',
@@ -538,7 +538,7 @@ export const colleges: College[] = [
     ranking: 30,
     feeStructure: 'Approx. ₹4.0 Lakhs per year (B.Tech)',
     scholarships: ['Merit-based scholarships for top rankers in MET'],
-    courses: ['Data Science and Engineering', 'Mechatronics Engineering', 'Aeronautical Engineering', 'Biomedical Engineering', 'Masters in Computer Applications'],
+    courses: ['Data Science and Engineering', 'Mechatronics Engineering', 'Aeronautical Engineering', 'Biomedical Engineering', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
     placements: {
       averagePackage: '₹8 LPA',
       overview: 'MIT Manipal is a well-known private engineering college with a diverse student population.',
@@ -754,7 +754,7 @@ export const colleges: College[] = [
     ranking: 42,
     feeStructure: 'Approx. ₹1.8 Lakhs per year (B.Tech ICT)',
     scholarships: ['Merit and Merit-cum-Means scholarships'],
-    courses: ['Information and Communication Technology (ICT)', 'ICT with minor in Computational Science', 'Mathematics and Computing', 'Electronics and VLSI Design', 'Masters in Computer Applications'],
+    courses: ['Information and Communication Technology (ICT)', 'ICT with minor in Computational Science', 'Mathematics and Computing', 'Electronics and VLSI Design', 'Masters in Computer Applications', 'Bachelor of Computer Applications'],
     placements: {
       averagePackage: '₹15 LPA',
       overview: 'Dhirubhai Ambani Institute of Information and Communication Technology is known for its specialized programs in ICT.',
@@ -976,5 +976,7 @@ export const entranceExams: EntranceExam[] = [
 
 export const getCollegeById = (id: string): College | undefined => colleges.find(c => c.id === id);
 export const getExamById = (id: string): EntranceExam | undefined => entranceExams.find(e => e.id === id);
+
+    
 
     
