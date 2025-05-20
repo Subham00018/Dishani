@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, type FormEvent } from 'react';
@@ -7,22 +8,23 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { AppLogo } from '@/components/AppLogo';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, Lock } from 'lucide-react';
 
 export default function LoginPage() {
   const router = useRouter();
   const [loginMethod, setLoginMethod] = useState<'email' | 'phone'>('email');
   const [identifier, setIdentifier] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     // In a real app, you'd handle authentication here.
     // For this scaffold, we'll just simulate login and redirect.
-    console.log(`Logging in with ${loginMethod}: ${identifier}`);
+    console.log(`Logging in with ${loginMethod}: ${identifier}, Password: ${password}`);
     // Simulate successful login by setting a flag or redirecting
     // For simplicity, directly navigating. A real app would use Auth context/session.
     localStorage.setItem('isLoggedIn', 'true'); // Simple flag for demo
-    router.push('/colleges');
+    router.push('/colleges'); // Redirect to /home or /colleges as per previous setup
   };
 
   return (
@@ -39,7 +41,11 @@ export default function LoginPage() {
               <Button
                 type="button"
                 variant={loginMethod === 'email' ? 'default' : 'outline'}
-                onClick={() => setLoginMethod('email')}
+                onClick={() => {
+                  setLoginMethod('email');
+                  setIdentifier(''); // Clear identifier when switching
+                  setPassword(''); // Clear password when switching
+                }}
                 className="flex-1"
               >
                 <Mail className="mr-2 h-4 w-4" /> Email
@@ -47,7 +53,11 @@ export default function LoginPage() {
               <Button
                 type="button"
                 variant={loginMethod === 'phone' ? 'default' : 'outline'}
-                onClick={() => setLoginMethod('phone')}
+                onClick={() => {
+                  setLoginMethod('phone');
+                  setIdentifier(''); // Clear identifier when switching
+                  setPassword(''); // Clear password when switching
+                }}
                 className="flex-1"
               >
                 <Phone className="mr-2 h-4 w-4" /> Phone
@@ -82,11 +92,21 @@ export default function LoginPage() {
               </div>
             )}
             
-            {/* In a real app, add password field or OTP logic */}
-            {/* <div className="space-y-2">
+            <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
-              <Input id="password" type="password" required />
-            </div> */}
+              <div className="relative">
+                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input
+                  id="password"
+                  type="password"
+                  placeholder="********"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  className="bg-background pl-10"
+                />
+              </div>
+            </div>
 
             <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
               Sign In
