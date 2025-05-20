@@ -3,16 +3,19 @@
 
 import Link from 'next/link';
 import { colleges, entranceExams } from '@/lib/data';
+import type { College } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { GraduationCap, BookOpenCheck, Users, ArrowRight } from 'lucide-react';
+import { GraduationCap, BookOpenCheck, Users, ArrowRight, School } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { EntranceExamBanner } from '@/components/colleges/EntranceExamBanner';
+import { CollegeCard } from '@/components/colleges/CollegeCard';
 
 export default function DashboardHomePage() {
   const [totalColleges, setTotalColleges] = useState(0);
   const [uniqueCourses, setUniqueCourses] = useState(0);
   const [studentsUsing, setStudentsUsing] = useState("10,000+"); // Placeholder
+  const [topNits, setTopNits] = useState<College[]>([]);
 
   useEffect(() => {
     setTotalColleges(colleges.length);
@@ -22,9 +25,20 @@ export default function DashboardHomePage() {
       college.courses.forEach(course => coursesSet.add(course));
     });
     setUniqueCourses(coursesSet.size);
+
+    // Filter, sort, and select top NITs
+    const nits = colleges
+      .filter(college => 
+        college.name.includes('NIT') || 
+        college.name.startsWith('MNNIT') || 
+        college.name.startsWith('VNIT') || 
+        college.name.startsWith('MANIT') ||
+        college.name.startsWith('SVNIT')
+      )
+      .sort((a, b) => (a.ranking || Infinity) - (b.ranking || Infinity))
+      .slice(0, 4); // Get top 4 NITs
+    setTopNits(nits);
     
-    // In a real app, you might fetch this data or calculate it differently
-    // For now, student count is static.
   }, []);
 
   const stats = [
@@ -80,6 +94,26 @@ export default function DashboardHomePage() {
           </Card>
         ))}
       </section>
+
+      {topNits.length > 0 && (
+        <section className="mb-12">
+          <div className="flex items-center mb-6">
+            <School className="h-8 w-8 text-primary mr-3" />
+            <h2 className="text-3xl font-bold text-primary">Top NITs in India</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {topNits.map((nit) => (
+              <CollegeCard
+                key={nit.id}
+                college={nit}
+                isSelectedForCompare={false}
+                onCompareSelect={() => {}} // No-op for home page
+                compareDisabled={true} // Disable compare selection from home
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="text-center py-8 bg-card rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold text-primary mb-4">Ready to Find Your Perfect College?</h2>
