@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -5,16 +6,17 @@ import { usePathname, useRouter } from 'next/navigation';
 import { AppLogo } from '@/components/AppLogo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { LayoutGrid, GitCompareArrows, LogOut, Menu, Home } from 'lucide-react'; // Added Home icon
+import { LayoutGrid, GitCompareArrows, LogOut, Menu, Home, HelpCircle } from 'lucide-react'; // Added Home, HelpCircle icons
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from 'react';
 
 
 const navLinks = [
-  { href: '/home', label: 'Home', icon: Home }, // Added Home link
+  { href: '/home', label: 'Home', icon: Home },
   { href: '/colleges', label: 'Colleges', icon: LayoutGrid },
   { href: '/compare', label: 'Compare', icon: GitCompareArrows },
+  { href: '/help-support', label: 'Help', icon: HelpCircle }, // Added Help link
 ];
 
 export function AppHeader() {
