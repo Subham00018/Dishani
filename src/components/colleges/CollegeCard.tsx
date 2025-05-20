@@ -46,17 +46,22 @@ export function CollegeCard({ college, isSelectedForCompare, onCompareSelect, co
             </div>
         </div>
         
-        <p className="text-sm text-muted-foreground mb-2 line-clamp-2">{college.about.substring(0,100)}...</p>
+        <p className="text-sm text-muted-foreground mb-3 line-clamp-3">{college.about}</p>
 
-        <div className="space-y-1 text-sm mb-3">
-          <div className="flex items-start text-muted-foreground"> {/* Changed items-center to items-start for better alignment if text wraps */}
-            <BookOpenCheck className="mr-2 h-4 w-4 text-accent shrink-0 mt-1" /> {/* Added shrink-0 and mt-1 for alignment */}
-            <div>
-              <span className="font-medium text-foreground mr-1">Courses:</span> 
-              {college.courses.join(', ')}
+        <div className="space-y-2 text-sm mb-3"> {/* Increased space-y for sections */}
+          <div> {/* Courses section */}
+            <div className="flex items-center text-muted-foreground mb-1">
+              <BookOpenCheck className="mr-2 h-4 w-4 text-accent shrink-0" />
+              <span className="font-medium text-foreground">Courses:</span>
             </div>
+            <ul className="list-disc list-inside pl-4 space-y-0.5 text-xs text-muted-foreground">
+              {college.courses.map((course, index) => (
+                <li key={index} className="leading-tight">{course}</li>
+              ))}
+            </ul>
           </div>
-          <div className="flex items-center text-muted-foreground">
+          
+          <div className="flex items-center text-muted-foreground pt-1"> {/* Added pt-1 for slight separation */}
             <TrendingUp className="mr-2 h-4 w-4 text-accent" />
             <span className="font-medium text-foreground mr-1">Placements:</span> {college.placements.averagePackage ? `Avg. ${college.placements.averagePackage}` : 'Strong record'}
           </div>
