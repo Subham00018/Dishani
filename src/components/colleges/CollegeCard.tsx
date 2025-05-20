@@ -48,20 +48,23 @@ export function CollegeCard({ college, isSelectedForCompare, onCompareSelect, co
         
         <p className="text-sm text-muted-foreground mb-3 line-clamp-3">{college.about}</p>
 
-        <div className="space-y-2 text-sm mb-3"> {/* Increased space-y for sections */}
-          <div> {/* Courses section */}
+        <div className="space-y-2 text-sm mb-3">
+          <div>
             <div className="flex items-center text-muted-foreground mb-1">
               <BookOpenCheck className="mr-2 h-4 w-4 text-accent shrink-0" />
               <span className="font-medium text-foreground">Courses:</span>
             </div>
-            <ul className="list-disc list-inside pl-4 space-y-0.5 text-xs text-muted-foreground">
+            <ul className="space-y-1 text-xs text-muted-foreground">
               {college.courses.map((course, index) => (
-                <li key={index} className="leading-tight">{course}</li>
+                <li key={index} className="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-3.5 w-3.5 text-accent shrink-0 mt-0.5"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  <span className="leading-tight">{course}</span>
+                </li>
               ))}
             </ul>
           </div>
           
-          <div className="flex items-center text-muted-foreground pt-1"> {/* Added pt-1 for slight separation */}
+          <div className="flex items-center text-muted-foreground pt-1">
             <TrendingUp className="mr-2 h-4 w-4 text-accent" />
             <span className="font-medium text-foreground mr-1">Placements:</span> {college.placements.averagePackage ? `Avg. ${college.placements.averagePackage}` : 'Strong record'}
           </div>

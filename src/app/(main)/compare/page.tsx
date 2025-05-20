@@ -60,16 +60,28 @@ function ComparePageContent() {
     { label: 'Ranking', icon: Award, key: 'ranking', render: (college: College | null) => college?.ranking ? `#${college.ranking}` : 'N/A' },
     { label: 'Fee Structure', icon: DollarSign, key: 'feeStructure' },
     {
-      label: 'Key Courses', icon: BookOpenCheck, render: (college: College | null) => college?.courses.join(', ') || 'N/A'
+      label: 'Key Courses', icon: BookOpenCheck, render: (college: College | null) => {
+        if (!college || !college.courses || college.courses.length === 0) return <span className="text-muted-foreground">N/A</span>;
+        return (
+          <ul className="space-y-1 text-left text-xs text-muted-foreground">
+            {college.courses.map((course, index) => (
+              <li key={index} className="flex items-start">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-3.5 w-3.5 text-accent shrink-0 mt-0.5"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                <span>{course}</span>
+              </li>
+            ))}
+          </ul>
+        );
+      }
     },
     {
-      label: 'Avg. Placement Package', icon: Briefcase, render: (college: College | null) => college?.placements.averagePackage || 'N/A'
+      label: 'Avg. Placement Package', icon: Briefcase, render: (college: College | null) => college?.placements.averagePackage || <span className="text-muted-foreground">N/A</span>
     },
     {
-      label: 'Highest Placement Package', icon: Briefcase, render: (college: College | null) => college?.placements.highestPackage || 'N/A'
+      label: 'Highest Placement Package', icon: Briefcase, render: (college: College | null) => college?.placements.highestPackage || <span className="text-muted-foreground">N/A</span>
     },
     {
-      label: 'About', icon: Info, render: (college: College | null) => <p className="text-xs line-clamp-4">{college?.about || 'N/A'}</p>
+      label: 'About', icon: Info, render: (college: College | null) => <p className="text-xs line-clamp-4 text-muted-foreground">{college?.about || 'N/A'}</p>
     },
   ];
 
@@ -133,17 +145,17 @@ function ComparePageContent() {
                 <TableBody>
                   {comparisonFields.map((field) => (
                     <TableRow key={field.label}>
-                      <TableCell className="font-medium text-foreground align-top"> {/* Added align-top */}
-                        <div className="flex items-start pt-1"> {/* Changed items-center to items-start and added pt-1 */}
-                          <field.icon className="mr-2 h-4 w-4 text-primary shrink-0" /> {/* Added shrink-0 */}
+                      <TableCell className="font-medium text-foreground align-top"> 
+                        <div className="flex items-start pt-1"> 
+                          <field.icon className="mr-2 h-4 w-4 text-primary shrink-0" /> 
                           {field.label}
                         </div>
                       </TableCell>
-                      <TableCell className="text-center align-top"> {/* Added align-top */}
-                        {field.render ? field.render(college1) : (college1?.[field.key as keyof College] as string || 'N/A')}
+                      <TableCell className="text-center align-top"> 
+                        {field.render ? field.render(college1) : (college1?.[field.key as keyof College] as string || <span className="text-muted-foreground">N/A</span>)}
                       </TableCell>
-                      <TableCell className="text-center align-top"> {/* Added align-top */}
-                        {field.render ? field.render(college2) : (college2?.[field.key as keyof College] as string || 'N/A')}
+                      <TableCell className="text-center align-top"> 
+                        {field.render ? field.render(college2) : (college2?.[field.key as keyof College] as string || <span className="text-muted-foreground">N/A</span>)}
                       </TableCell>
                     </TableRow>
                   ))}
@@ -172,3 +184,4 @@ export default function ComparePage() {
     </Suspense>
   );
 }
+
