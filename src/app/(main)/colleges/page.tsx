@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { colleges, entranceExams } from '@/lib/data';
 import type { College } from '@/lib/types';
@@ -25,6 +25,44 @@ export default function CollegesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedForCompare, setSelectedForCompare] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<string>('ranking'); // 'ranking', 'name'
+
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  useEffect(() => {
+    if (searchTerm.trim() === '') {
+      setSuggestions([]);
+      setShowSuggestions(false);
+      return;
+    }
+
+    const lowerSearchTerm = searchTerm.toLowerCase();
+    const newSuggestionsSet = new Set<string>();
+
+    colleges.forEach(college => {
+      if (college.name.toLowerCase().includes(lowerSearchTerm)) {
+        newSuggestionsSet.add(college.name);
+      }
+      if (college.location.toLowerCase().includes(lowerSearchTerm)) {
+        newSuggestionsSet.add(college.location);
+      }
+      college.courses.forEach(course => {
+        if (course.toLowerCase().includes(lowerSearchTerm)) {
+          newSuggestionsSet.add(course);
+        }
+      });
+    });
+
+    const limitedSuggestions = Array.from(newSuggestionsSet).slice(0, 7); // Show max 7 suggestions
+    setSuggestions(limitedSuggestions);
+    setShowSuggestions(limitedSuggestions.length > 0);
+
+  }, [searchTerm]);
+
+  const handleSuggestionClick = (suggestion: string) => {
+    setSearchTerm(suggestion);
+    setShowSuggestions(false);
+  };
 
   const handleCompareSelect = (collegeId: string) => {
     setSelectedForCompare((prev) => {
@@ -100,8 +138,32 @@ export default function CollegesPage() {
               placeholder="Search colleges, locations, courses..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
+              onFocus={() => {
+                if (searchTerm.trim() && suggestions.length > 0) {
+                  setShowSuggestions(true);
+                }
+              }}
+              onBlur={() => {
+                // Delay hiding to allow click on suggestion items
+                setTimeout(() => setShowSuggestions(false), 150);
+              }}
               className="pl-10 w-full"
             />
+            {showSuggestions && suggestions.length > 0 && (
+              <div className="absolute z-10 w-full mt-1 bg-card border border-border rounded-md shadow-lg max-h-60 overflow-y-auto">
+                <ul>
+                  {suggestions.map((suggestion, index) => (
+                    <li
+                      key={index}
+                      className="px-3 py-2 hover:bg-accent hover:text-accent-foreground cursor-pointer text-sm"
+                      onMouseDown={() => handleSuggestionClick(suggestion)} // Use onMouseDown to ensure click registers before blur
+                    >
+                      {suggestion}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
           <Select value={sortBy} onValueChange={setSortBy}>
             <SelectTrigger className="w-full md:w-[180px]">
@@ -135,4 +197,3 @@ export default function CollegesPage() {
     </div>
   );
 }
-
