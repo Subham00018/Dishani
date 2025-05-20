@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -94,6 +95,16 @@ export default function CollegeDetailsPage() {
                 <CardTitle className="text-2xl flex items-center"><Globe className="mr-3 h-6 w-6 text-primary" />About {college.name}</CardTitle>
               </CardHeader>
               <CardContent>
+                <div className="mb-6">
+                  <Image
+                    src={college.campusPhotoUrl}
+                    alt={`Campus of ${college.name}`}
+                    width={800}
+                    height={450}
+                    className="rounded-lg shadow-md w-full object-cover aspect-video"
+                    data-ai-hint={college.dataAiHint || "university campus building"}
+                  />
+                </div>
                 <p className="text-muted-foreground leading-relaxed">{college.about}</p>
                 {college.website && (
                   <Button asChild variant="link" className="px-0 mt-4 text-primary">
