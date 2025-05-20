@@ -6,8 +6,8 @@ import { usePathname, useRouter } from 'next/navigation';
 import { AppLogo } from '@/components/AppLogo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { LayoutGrid, GitCompareArrows, LogOut, Menu, Home, HelpCircle } from 'lucide-react'; // Added Home, HelpCircle icons
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { LayoutGrid, GitCompareArrows, LogOut, Menu, Home, HelpCircle } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from 'react';
 
@@ -16,7 +16,7 @@ const navLinks = [
   { href: '/home', label: 'Home', icon: Home },
   { href: '/colleges', label: 'Colleges', icon: LayoutGrid },
   { href: '/compare', label: 'Compare', icon: GitCompareArrows },
-  { href: '/help-support', label: 'Help', icon: HelpCircle }, // Added Help link
+  { href: '/help-support', label: 'Help', icon: HelpCircle },
 ];
 
 export function AppHeader() {
@@ -45,7 +45,7 @@ export function AppHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
-        <Link href="/home" className="flex items-center space-x-2"> {/* AppLogo now links to /home */}
+        <Link href="/home" className="flex items-center space-x-2">
           <AppLogo appName="EduCompare India" />
         </Link>
 
@@ -79,18 +79,25 @@ export function AppHeader() {
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs p-6 bg-background">
-              <div className="flex flex-col space-y-4">
-                <Link href="/home" className="flex items-center space-x-2 mb-4" onClick={() => setIsMobileMenuOpen(false)}> {/* AppLogo now links to /home */}
-                  <AppLogo appName="EduCompare India" />
-                </Link>
-                <Separator />
+            <SheetContent side="right" className="w-full max-w-xs p-0 bg-background">
+              <SheetHeader className="p-6 pb-0">
+                <SheetTitle>
+                  <Link href="/home" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
+                    <AppLogo appName="EduCompare India" />
+                  </Link>
+                </SheetTitle>
+                <SheetDescription className="sr-only">
+                  Mobile navigation menu for EduCompare India.
+                </SheetDescription>
+              </SheetHeader>
+              <div className="flex flex-col space-y-2 p-6 pt-4">
+                <Separator className="mb-2" />
                 {navLinks.map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Link
                       href={link.href}
                       className={cn(
-                        'flex items-center space-x-2 rounded-md p-2 text-lg transition-colors hover:bg-accent hover:text-accent-foreground',
+                        'flex items-center space-x-2 rounded-md p-3 text-base transition-colors hover:bg-accent hover:text-accent-foreground',
                         pathname === link.href ? 'bg-accent text-accent-foreground font-semibold' : 'text-foreground'
                       )}
                       onClick={() => setIsMobileMenuOpen(false)}
@@ -100,10 +107,10 @@ export function AppHeader() {
                     </Link>
                   </SheetClose>
                 ))}
-                <Separator />
-                 <Button variant="ghost" onClick={() => { handleLogout(); setIsMobileMenuOpen(false); }} className="w-full justify-start p-2 text-lg text-foreground hover:bg-accent hover:text-accent-foreground">
+                <Separator className="my-2"/>
+                 <Button variant="ghost" onClick={() => { handleLogout(); setIsMobileMenuOpen(false); }} className="w-full justify-start p-3 text-base text-foreground hover:bg-accent hover:text-accent-foreground">
                     <LogOut className="mr-2 h-5 w-5" />
-                    Logout
+                    <span>Logout</span>
                   </Button>
               </div>
             </SheetContent>
