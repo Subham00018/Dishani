@@ -5,116 +5,116 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { AppLogo } from '@/components/AppLogo';
 import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
+import { Menu, LogOut, Home, GraduationCap, ArrowLeftRight, HelpCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { LayoutGrid, GitCompareArrows, LogOut, Menu, Home, HelpCircle } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
-import { Separator } from "@/components/ui/separator";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-
-const navLinks = [
+const navItems = [
   { href: '/home', label: 'Home', icon: Home },
-  { href: '/colleges', label: 'Colleges', icon: LayoutGrid },
-  { href: '/compare', label: 'Compare', icon: GitCompareArrows },
+  { href: '/colleges', label: 'Colleges', icon: GraduationCap },
+  { href: '/compare', label: 'Compare', icon: ArrowLeftRight },
   { href: '/help-support', label: 'Help', icon: HelpCircle },
 ];
 
 export function AppHeader() {
   const pathname = usePathname();
   const router = useRouter();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleLogout = () => {
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('isLoggedIn');
-    }
-    router.push('/login');
+    localStorage.removeItem('isLoggedIn');
+    router.replace('/login');
   };
-  
-  if (!isMounted) {
-    return null; // Or a placeholder/loader
-  }
-
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
-        <Link href="/home" className="flex items-center space-x-2">
-          <AppLogo appName="EduCompare India" />
-        </Link>
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center">
+        <div className="mr-4 hidden md:flex">
+          <Link href="/home" className="mr-6 flex items-center space-x-2">
+            <AppLogo appName="EduCompare" />
+          </Link>
+          <nav className="flex items-center space-x-6 text-sm font-medium">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={cn(
+                  'transition-colors hover:text-primary',
+                  pathname === item.href ? 'text-primary' : 'text-muted-foreground'
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                'transition-colors hover:text-primary',
-                pathname === link.href ? 'text-primary font-semibold' : 'text-muted-foreground'
-              )}
+        {/* Mobile Menu */}
+        <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+          <SheetTrigger asChild>
+            <Button
+              variant="ghost"
+              className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+              aria-label="Open mobile menu"
             >
-              <link.icon className="inline-block mr-1 h-4 w-4" />
-              {link.label}
-            </Link>
-          ))}
-          <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted-foreground hover:text-primary">
-            <LogOut className="mr-1 h-4 w-4" />
-            Logout
-          </Button>
-        </nav>
-
-        {/* Mobile Navigation */}
-        <div className="md:hidden">
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs p-0 bg-background">
-              <SheetHeader className="p-6 pb-0">
-                <SheetTitle>
-                  <Link href="/home" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
+              <Menu className="h-6 w-6" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="left" className="pr-0 w-[300px]">
+            <SheetHeader className="p-4 text-left">
+               <SheetTitle>
+                 <Link href="/home" className="flex items-center" onClick={() => setMobileMenuOpen(false)}>
                     <AppLogo appName="EduCompare India" />
+                 </Link>
+               </SheetTitle>
+               <SheetDescription className="sr-only">Main navigation menu</SheetDescription>
+            </SheetHeader>
+            <div className="flex h-full flex-col px-2 py-4">
+              <div className="flex flex-col space-y-2">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      'flex items-center rounded-md px-3 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground',
+                      pathname === item.href ? 'bg-accent text-accent-foreground' : 'text-muted-foreground'
+                    )}
+                  >
+                    <item.icon className="mr-3 h-5 w-5" />
+                    {item.label}
                   </Link>
-                </SheetTitle>
-                <SheetDescription className="sr-only">
-                  Mobile navigation menu for EduCompare India.
-                </SheetDescription>
-              </SheetHeader>
-              <div className="flex flex-col space-y-2 p-6 pt-4">
-                <Separator className="mb-2" />
-                {navLinks.map((link) => (
-                  <SheetClose asChild key={link.href}>
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        'flex items-center space-x-2 rounded-md p-3 text-base transition-colors hover:bg-accent hover:text-accent-foreground',
-                        pathname === link.href ? 'bg-accent text-accent-foreground font-semibold' : 'text-foreground'
-                      )}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <link.icon className="h-5 w-5" />
-                      <span>{link.label}</span>
-                    </Link>
-                  </SheetClose>
                 ))}
-                <Separator className="my-2"/>
-                 <Button variant="ghost" onClick={() => { handleLogout(); setIsMobileMenuOpen(false); }} className="w-full justify-start p-3 text-base text-foreground hover:bg-accent hover:text-accent-foreground">
-                    <LogOut className="mr-2 h-5 w-5" />
-                    <span>Logout</span>
-                  </Button>
               </div>
-            </SheetContent>
-          </Sheet>
+              <div className="mt-auto pt-4">
+                <Button
+                  variant="outline"
+                  className="w-full justify-start"
+                  onClick={() => {
+                    handleLogout();
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  <LogOut className="mr-3 h-5 w-5" />
+                  Logout
+                </Button>
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
+        
+        {/* App Logo for mobile centered (when menu icon is present) */}
+        <div className="flex flex-1 items-center justify-start md:hidden">
+          <Link href="/home" className="flex items-center space-x-2">
+            <AppLogo appName="EduCompare" appNameClassName='text-lg' />
+          </Link>
+        </div>
+
+        <div className="flex flex-1 items-center justify-end space-x-2">
+          <Button variant="ghost" onClick={handleLogout} className="hidden md:inline-flex">
+            <LogOut className="mr-2 h-4 w-4" /> Logout
+          </Button>
         </div>
       </div>
     </header>
