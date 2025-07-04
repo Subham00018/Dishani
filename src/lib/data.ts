@@ -26,7 +26,6 @@ export const colleges: College[] = [
       overview: 'IIT Bombay boasts excellent placement records with students receiving offers from top global companies.',
     },
     about: 'Indian Institute of Technology Bombay is a public technical and research university located in Powai, Mumbai. It is known for its flagship 4-year, 5-year, and 2-year programmes for which the entry is through the Joint Entrance Examination – Advanced and Graduate Aptitude Test in Engineering.',
-    website: 'https://www.iitb.ac.in/',
     eligibility: 'For B.Tech programmes, admission is through JEE Advanced rank. Candidates must have passed 10+2 with Physics, Chemistry, and Mathematics with at least 75% marks. For M.Tech, a valid GATE score is required.',
     hostelInfo: 'IIT Bombay provides comprehensive hostel facilities for all students. There are separate hostels for male and female students with all necessary amenities including mess facilities, recreational areas, and internet connectivity.'
   },
@@ -677,7 +676,7 @@ export const colleges: College[] = [
     dataAiHint: 'spiritual campus',
     location: 'Coimbatore, Tamil Nadu',
     ranking: 27,
-    feeStructure: 'Approx. ₹3.5 Lakhs per year (B.Tech). BCA/MCA fees may differ.',
+    feeStructure: 'Approx. ₹3.5 Lakhs per year (B.Tech). BCA/MCA fees differ.',
     scholarships: ['Amrita Entrance Examination based scholarships'],
     courses: [
       { name: 'Aerospace Engineering', fee: 'Approx. ₹3.5 Lakhs per year (B.Tech)' },
