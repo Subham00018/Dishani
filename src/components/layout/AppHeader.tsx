@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { AppLogo } from '@/components/AppLogo';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, LogOut, Home, GraduationCap, ArrowLeftRight, HelpCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
