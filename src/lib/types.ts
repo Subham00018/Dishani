@@ -24,6 +24,8 @@ export interface College {
   };
   about: string;
   website?: string;
+  eligibility: string;
+  hostelInfo: string;
 }
 
 export interface EntranceExam {

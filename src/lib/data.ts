@@ -26,7 +26,9 @@ export const colleges: College[] = [
       overview: 'IIT Bombay boasts excellent placement records with students receiving offers from top global companies.',
     },
     about: 'Indian Institute of Technology Bombay is a public technical and research university located in Powai, Mumbai. It is known for its flagship 4-year, 5-year, and 2-year programmes for which the entry is through the Joint Entrance Examination – Advanced and Graduate Aptitude Test in Engineering.',
-    website: 'https://www.iitb.ac.in/'
+    website: 'https://www.iitb.ac.in/',
+    eligibility: 'For B.Tech programmes, admission is through JEE Advanced rank. Candidates must have passed 10+2 with Physics, Chemistry, and Mathematics with at least 75% marks. For M.Tech, a valid GATE score is required.',
+    hostelInfo: 'IIT Bombay provides comprehensive hostel facilities for all students. There are separate hostels for male and female students with all necessary amenities including mess facilities, recreational areas, and internet connectivity.'
   },
   {
     id: 'iit-delhi',
@@ -50,7 +52,9 @@ export const colleges: College[] = [
       overview: 'IIT Delhi has a strong industry connection, leading to high placement rates in diverse sectors.',
     },
     about: 'Indian Institute of Technology Delhi is a public technical and research university located in Hauz Khas, Delhi. It is one of the oldest Indian Institutes of Technology in India.',
-    website: 'https://home.iitd.ac.in/'
+    website: 'https://home.iitd.ac.in/',
+    eligibility: 'Admission to B.Tech courses is based on JEE Advanced scores. Candidates must have completed 10+2 with PCM and secured a minimum of 75% marks. GATE scores are required for M.Tech admissions.',
+    hostelInfo: 'The institute provides residential facilities to all undergraduate and postgraduate students. Hostels are well-equipped with modern amenities, mess, and sports facilities.'
   },
   {
     id: 'iisc-bangalore',
@@ -72,7 +76,9 @@ export const colleges: College[] = [
       overview: 'IISc focuses on research and academia, with graduates often pursuing higher studies or R&D roles.',
     },
     about: 'The Indian Institute of Science is a public, deemed, research university for higher education and research in science, engineering, design, and management. It is located in Bengaluru, in the Indian state of Karnataka.',
-    website: 'https://iisc.ac.in/'
+    website: 'https://iisc.ac.in/',
+    eligibility: 'For the Bachelor of Science (Research) programme, admission is through JEE Main, JEE Advanced, or NEET-UG scores. For postgraduate courses, GATE/CEED scores are required.',
+    hostelInfo: 'IISc provides residential accommodation for all its students. The campus has separate hostels for men and women, equipped with all essential facilities for a comfortable stay.'
   },
   {
     id: 'iit-madras',
@@ -95,7 +101,9 @@ export const colleges: College[] = [
       overview: 'IIT Madras is known for its strong focus on innovation and entrepreneurship, reflected in its placement trends.',
     },
     about: 'Indian Institute of Technology Madras is a public technical and research university located in Chennai, Tamil Nadu and is one of the most prestigious institutes in India.',
-    website: 'https://www.iitm.ac.in/'
+    website: 'https://www.iitm.ac.in/',
+    eligibility: 'Candidates must qualify in JEE Advanced for B.Tech admission and have at least 75% in their 10+2 examinations with PCM. For M.Tech, a valid GATE score is necessary.',
+    hostelInfo: 'IIT Madras has 22 hostels and provides accommodation to all its students. The hostels are equipped with dining halls, laundry services, and recreational facilities.'
   },
   {
     id: 'bits-pilani',
@@ -119,7 +127,9 @@ export const colleges: College[] = [
       overview: 'BITS Pilani offers excellent placements across its campuses, with a strong alumni network.',
     },
     about: 'Birla Institute of Technology & Science, Pilani is a private deemed university in Pilani, India. It focuses primarily on higher education and research in engineering and sciences.',
-    website: 'https://www.bits-pilani.ac.in/'
+    website: 'https://www.bits-pilani.ac.in/',
+    eligibility: 'Admission to integrated first-degree programmes is through the BITSAT exam. Candidates need to have passed 10+2 with Physics, Chemistry, and Mathematics/Biology.',
+    hostelInfo: 'BITS Pilani is a fully residential institute. It provides hostel accommodation for all students, with separate hostels for boys and girls, featuring mess services and common areas.'
   },
   {
     id: 'iit-kanpur',
@@ -142,7 +152,9 @@ export const colleges: College[] = [
       overview: 'IIT Kanpur is known for its strong research focus and excellent placement opportunities.',
     },
     about: 'Indian Institute of Technology Kanpur is a public technical university located in Kanpur, Uttar Pradesh, India. It was declared to be an Institute of National Importance by the Government of India under the Institutes of Technology Act.',
-    website: 'https://www.iitk.ac.in/'
+    website: 'https://www.iitk.ac.in/',
+    eligibility: 'B.Tech admission requires qualifying in JEE Advanced. Candidates need a minimum of 75% in 10+2 (PCM). GATE score is required for M.Tech admissions.',
+    hostelInfo: 'The institute offers residential accommodation to all its students. Hostels are equipped with all basic amenities including internet, mess, and recreational facilities.'
   },
   {
     id: 'iit-kharagpur',
@@ -165,7 +177,9 @@ export const colleges: College[] = [
       overview: 'Being the oldest IIT, it has a vast alumni network and consistent placement records.',
     },
     about: 'The Indian Institute of Technology Kharagpur is a public technical university established by the government of India in Kharagpur, West Bengal, India. Established in 1951, the institute is the first of the IITs to be established and is recognised as an Institute of National Importance.',
-    website: 'https://www.iitkgp.ac.in/'
+    website: 'https://www.iitkgp.ac.in/',
+    eligibility: 'Admission to undergraduate programs is through JEE Advanced. Candidates must have passed 10+2 with PCM and secured at least 75% marks. GATE scores for M.Tech programs.',
+    hostelInfo: 'IIT Kharagpur is a fully residential institute with over 22 hostels. It provides accommodation to all students with mess facilities and other amenities.'
   },
   {
     id: 'iit-roorkee',
@@ -188,7 +202,9 @@ export const colleges: College[] = [
       overview: 'IIT Roorkee offers diverse engineering programs and has a good placement record.',
     },
     about: 'Indian Institute of Technology Roorkee is a public technical university located in Roorkee, Uttarakhand, India. It is the oldest engineering institution in India, and was formerly known as Thomason College of Civil Engineering.',
-    website: 'https://www.iitr.ac.in/'
+    website: 'https://www.iitr.ac.in/',
+    eligibility: 'B.Tech admission is based on JEE Advanced rank. A minimum of 75% in 10+2 with PCM is required. For B.Arch, AAT is also required. M.Tech admission requires a valid GATE score.',
+    hostelInfo: 'The institute provides on-campus residential facilities for all students. Hostels are well-maintained with mess, sports, and other recreational facilities available.'
   },
   {
     id: 'iit-guwahati',
@@ -211,7 +227,9 @@ export const colleges: College[] = [
       overview: 'IIT Guwahati is known for its beautiful campus and growing prominence in research and placements.',
     },
     about: 'Indian Institute of Technology Guwahati is a public technical university established by the Government of India, located in Amingaon area, North Guwahati city, in the state of Assam in India. It is the sixth Indian Institute of Technology established in India.',
-    website: 'https://www.iitg.ac.in/'
+    website: 'https://www.iitg.ac.in/',
+    eligibility: 'For B.Tech, candidates must clear JEE Advanced. For B.Des, UCEED score is required. A minimum of 75% in 10+2 is necessary for B.Tech. GATE score for M.Tech.',
+    hostelInfo: 'IIT Guwahati is a fully residential campus. All students are provided with hostel accommodation. The hostels are equipped with all modern amenities.'
   },
   {
     id: 'nit-trichy',
@@ -235,7 +253,9 @@ export const colleges: College[] = [
       overview: 'NIT Trichy is one of the top NITs with excellent academic and placement records.',
     },
     about: 'National Institute of Technology Tiruchirappalli, commonly referred to as NIT Trichy, is a public technical and research university near the city of Tiruchirappalli in Tamil Nadu, India.',
-    website: 'https://www.nitt.edu/'
+    website: 'https://www.nitt.edu/',
+    eligibility: 'Admission to B.Tech programs is through JEE Main rank. Candidates must have passed 10+2 with PCM. For MCA, a valid NIMCET score is required.',
+    hostelInfo: 'NIT Trichy has 24 hostels providing accommodation to over 9,000 students. Separate hostels are available for boys and girls with all necessary facilities.'
   },
   {
     id: 'jadavpur-university',
@@ -260,7 +280,9 @@ export const colleges: College[] = [
       overview: 'Jadavpur University is known for its strong engineering programs and affordable education with good placements.',
     },
     about: 'Jadavpur University is a public technical university located in Jadavpur, Kolkata, West Bengal, India. It has a long tradition of providing high-quality education at nominal costs.',
-    website: 'http://www.jaduniv.edu.in/'
+    website: 'http://www.jaduniv.edu.in/',
+    eligibility: 'Admission to engineering courses is based on the WBJEE rank. For other courses, admission is through university-specific entrance tests or merit-based.',
+    hostelInfo: 'The university provides limited hostel facilities for students from outside Kolkata. Allotment is based on distance and merit.'
   },
   {
     id: 'vit-vellore',
@@ -287,7 +309,9 @@ export const colleges: College[] = [
       overview: 'VIT is known for its large student intake and good placement opportunities in IT and core sectors.',
     },
     about: 'Vellore Institute of Technology (VIT) is a private deemed university located in Vellore, Tamil Nadu, India. It has campuses in Vellore, Chennai, Amaravati and Bhopal.',
-    website: 'https://vit.ac.in/'
+    website: 'https://vit.ac.in/',
+    eligibility: 'Admission to B.Tech is through the VITEEE exam. For BCA and MCA, specific eligibility criteria and entrance procedures apply. Candidates need to have passed 10+2 with required subjects.',
+    hostelInfo: 'VIT provides well-furnished residential facilities for all students. Hostels are equipped with modern amenities, and separate hostels are available for men and women.'
   },
   {
     id: 'nit-surathkal',
@@ -311,7 +335,9 @@ export const colleges: College[] = [
       overview: 'NITK Surathkal is a premier NIT with a beautiful coastal campus and strong placement records.',
     },
     about: 'National Institute of Technology Karnataka, also known as NITK Surathkal, formerly Karnataka Regional Engineering College, is a public technical university at Surathkal, Mangalore.',
-    website: 'https://www.nitk.ac.in/'
+    website: 'https://www.nitk.ac.in/',
+    eligibility: 'B.Tech admissions are based on JEE Main scores. Candidates must have passed 10+2 with PCM. For MCA, NIMCET score is required.',
+    hostelInfo: 'NITK is a residential campus with hostel facilities for almost all students. Separate hostels for boys, girls, and postgraduate students are available.'
   },
   {
     id: 'anna-university',
@@ -335,7 +361,9 @@ export const colleges: College[] = [
       overview: 'Anna University is a large technical university with many affiliated colleges. Placements vary by college.',
     },
     about: 'Anna University is a public state university located in Chennai, Tamil Nadu, India. The main university campus is located in Guindy, Chennai.',
-    website: 'https://www.annauniv.edu/'
+    website: 'https://www.annauniv.edu/',
+    eligibility: 'Admissions to B.E./B.Tech are through TNEA counselling based on 10+2 marks. For postgraduate courses like MCA, TANCET scores are required.',
+    hostelInfo: 'Hostel facilities are available at the main campus and constituent colleges. Allotment is based on various factors including distance and application process.'
   },
   {
     id: 'iit-hyderabad',
@@ -358,7 +386,9 @@ export const colleges: College[] = [
       overview: 'IIT Hyderabad is one of the newer IITs but has quickly established a reputation for quality education and research.',
     },
     about: 'Indian Institute of Technology Hyderabad is a public technical university located in Sangareddy district, Telangana, India. IITH is known for its academic strength, research, publications and proximity to IT and industrial hubs.',
-    website: 'https://www.iith.ac.in/'
+    website: 'https://www.iith.ac.in/',
+    eligibility: 'Admission to B.Tech programs requires qualifying JEE Advanced. Candidates must have a minimum of 75% in 10+2 with PCM. M.Tech admissions are through GATE scores.',
+    hostelInfo: 'IIT Hyderabad is a fully residential campus with 15 hostels. All students are provided with hostel accommodation with modern facilities and mess services.'
   },
   {
     id: 'nit-warangal',
@@ -382,7 +412,9 @@ export const colleges: College[] = [
       overview: 'NIT Warangal is one of the oldest and most reputed NITs in India.',
     },
     about: 'National Institute of Technology, Warangal is a public technical and research university located in Warangal, India. It is recognised as an Institute of National Importance by the Government of India.',
-    website: 'https://www.nitw.ac.in/'
+    website: 'https://www.nitw.ac.in/',
+    eligibility: 'B.Tech admissions are based on JEE Main rank. Candidates must have completed 10+2 with PCM. For MCA, a valid NIMCET score is required.',
+    hostelInfo: 'The institute has a large residential campus with over 20 hostels for boys and girls, providing accommodation to all students.'
   },
   {
     id: 'iit-indore',
@@ -405,7 +437,9 @@ export const colleges: College[] = [
       overview: 'IIT Indore has shown rapid growth in academic and research activities, leading to good placements.',
     },
     about: 'Indian Institute of Technology Indore, located in Indore, is an institute of national importance established by the Government of India in 2009.',
-    website: 'https://www.iiti.ac.in/'
+    website: 'https://www.iiti.ac.in/',
+    eligibility: 'Admission to B.Tech courses is through JEE Advanced. A minimum of 75% in 10+2 with PCM is required. GATE scores are needed for M.Tech programs.',
+    hostelInfo: 'IIT Indore provides on-campus hostel facilities to all its students. The hostels are equipped with essential amenities for a comfortable living and learning environment.'
   },
   {
     id: 'iit-bhu',
@@ -428,7 +462,9 @@ export const colleges: College[] = [
       overview: 'IIT (BHU) has a long history and offers a wide range of engineering programs.',
     },
     about: 'The Indian Institute of Technology (BHU) Varanasi is a public technical university located in Varanasi, Uttar Pradesh, India. Founded in 1919 as the Banaras Engineering College, it became an IIT in 2012.',
-    website: 'https://iitbhu.ac.in/'
+    website: 'https://iitbhu.ac.in/',
+    eligibility: 'Candidates for B.Tech programs must qualify JEE Advanced and have at least 75% in 10+2 (PCM). For M.Tech, a valid GATE score is required.',
+    hostelInfo: 'The institute has a residential campus within Banaras Hindu University, providing hostel accommodation for all students with mess and other facilities.'
   },
   {
     id: 'ict-mumbai',
@@ -451,7 +487,9 @@ export const colleges: College[] = [
       overview: 'Institute of Chemical Technology is a premier institute for chemical engineering and technology.',
     },
     about: 'Institute of Chemical Technology is a public deemed university in Mumbai, India. The institute also has campuses at Jalna, Marathwada and Bhubaneswar, Odisha. It is focused on training and research in fields of chemical engineering, chemical technology, and pharmacy.',
-    website: 'https://www.ictmumbai.edu.in/'
+    website: 'https://www.ictmumbai.edu.in/',
+    eligibility: 'Admission to B.Tech programs is based on MHT-CET or JEE Main scores. Candidates must have passed 10+2 with PCM and English.',
+    hostelInfo: 'ICT has 5 hostel blocks. Accommodation is provided based on availability and merit. Separate facilities are available for boys and girls.'
   },
   {
     id: 'iit-ropar',
@@ -474,7 +512,9 @@ export const colleges: College[] = [
       overview: 'IIT Ropar is among the newer IITs showing strong growth in placements and research output.',
     },
     about: 'Indian Institute of Technology Ropar is a public technical university located in Rupnagar, Punjab, India. It is one of the eight newer Indian Institutes of Technology established by the Ministry of Human Resource Development, Government of India.',
-    website: 'https://www.iitrpr.ac.in/'
+    website: 'https://www.iitrpr.ac.in/',
+    eligibility: 'B.Tech admission requires qualifying in JEE Advanced. Candidates need a minimum of 75% in 10+2 with PCM. M.Tech admissions are based on GATE scores.',
+    hostelInfo: 'IIT Ropar is a fully residential institute with separate hostels for boys and girls. All hostels are equipped with modern amenities, including Wi-Fi and laundry services.'
   },
   {
     id: 'iit-patna',
@@ -497,7 +537,9 @@ export const colleges: College[] = [
       overview: 'IIT Patna is steadily improving its academic and placement performance.',
     },
     about: 'Indian Institute of Technology Patna is a public technical university located in Bihta, Patna, India. It is recognized as an Institute of National Importance by the Government of India.',
-    website: 'https://www.iitp.ac.in/'
+    website: 'https://www.iitp.ac.in/',
+    eligibility: 'Admission to B.Tech programs is through JEE Advanced. Candidates must have at least 75% in 10+2 (PCM). GATE scores are required for M.Tech courses.',
+    hostelInfo: 'IIT Patna provides residential facilities to all its students. The hostels are equipped with all necessary amenities for a comfortable stay.'
   },
   {
     id: 'iiest-shibpur',
@@ -520,7 +562,9 @@ export const colleges: College[] = [
       overview: 'Indian Institute of Engineering Science and Technology, Shibpur has a long legacy in engineering education.',
     },
     about: 'Indian Institute of Engineering Science and Technology, Shibpur is a public technical and research university located at Shibpur, Howrah district, West Bengal. It is recognised as an Institute of National Importance under MHRD by the Government of India.',
-    website: 'https://www.iiests.ac.in/'
+    website: 'https://www.iiests.ac.in/',
+    eligibility: 'Admission to undergraduate engineering programs is through JEE Main rank. Candidates must have passed 10+2 with PCM.',
+    hostelInfo: 'The institute has 17 hostels with accommodation for over 4,000 students. Separate hostel facilities are available for male and female students.'
   },
   {
     id: 'nit-rourkela',
@@ -544,7 +588,9 @@ export const colleges: College[] = [
       overview: 'NIT Rourkela offers a wide range of engineering disciplines and has good industry connections.',
     },
     about: 'National Institute of Technology Rourkela, formerly Regional Engineering College Rourkela, is a publicly funded institute of higher learning for engineering, science and technology located in the steel city of Rourkela, Odisha, India.',
-    website: 'https://www.nitrkl.ac.in/'
+    website: 'https://www.nitrkl.ac.in/',
+    eligibility: 'B.Tech admissions are based on JEE Main scores. For MCA, NIMCET score is required. Candidates must have passed 10+2 with PCM for engineering courses.',
+    hostelInfo: 'NIT Rourkela is a residential institute with accommodation provided to all students. The campus has separate hostels for boys and girls with all amenities.'
   },
   {
     id: 'iit-gandhinagar',
@@ -567,7 +613,9 @@ export const colleges: College[] = [
       overview: 'IIT Gandhinagar focuses on interdisciplinary learning and has a growing placement record.',
     },
     about: 'Indian Institute of Technology Gandhinagar is a public technical university located in Gandhinagar, Gujarat, India. It has been declared to be an Institute of National Importance by the Government of India.',
-    website: 'https://iitgn.ac.in/'
+    website: 'https://iitgn.ac.in/',
+    eligibility: 'Admission to B.Tech programs is through JEE Advanced. Candidates need to have passed 10+2 with PCM and a minimum of 75% marks. GATE for M.Tech.',
+    hostelInfo: 'The institute provides on-campus hostel facilities for all its students, fostering a vibrant and collaborative residential life with modern amenities.'
   },
   {
     id: 'thapar-patiala',
@@ -592,7 +640,9 @@ export const colleges: College[] = [
       overview: 'Thapar Institute of Engineering and Technology is a well-regarded private engineering institution.',
     },
     about: 'Thapar Institute of Engineering and Technology is a private deemed-to-be-university, in Patiala, Punjab, India. It was founded in 1956 by Karam Chand Thapar.',
-    website: 'https://www.thapar.edu/'
+    website: 'https://www.thapar.edu/',
+    eligibility: 'Admission to B.E./B.Tech is based on JEE Main scores. For BCA and MCA, specific eligibility criteria and admission tests may apply.',
+    hostelInfo: 'Thapar Institute has a residential campus with excellent hostel facilities for boys and girls, including dining, sports, and recreational areas.'
   },
   {
     id: 'amrita-coimbatore',
@@ -617,7 +667,9 @@ export const colleges: College[] = [
       overview: 'Amrita University has multiple campuses and offers a wide range of programs with decent placements.',
     },
     about: 'Amrita Vishwa Vidyapeetham is a private deemed university based in Coimbatore, Tamil Nadu, India. It is a multi-campus, multi-disciplinary teaching and research university.',
-    website: 'https://www.amrita.edu/'
+    website: 'https://www.amrita.edu/',
+    eligibility: 'Admission to B.Tech programs is through the Amrita Entrance Examination (AEEE). For other courses like BCA/MCA, the university conducts its own admission process.',
+    hostelInfo: 'The university provides secure and comfortable hostel facilities for students. Separate hostels are available for male and female students with modern amenities.'
   },
   {
     id: 'srm-chennai',
@@ -642,7 +694,9 @@ export const colleges: College[] = [
       overview: 'SRM Institute of Science and Technology is a large private university with a high volume of placements.',
     },
     about: 'SRM Institute of Science and Technology, is a private deemed university located in Kattankulathur, Chengalpattu, Tamil Nadu, India, near Chennai. It was founded in 1985 as SRM Engineering College in Kattankulathur.',
-    website: 'https://www.srmist.edu.in/'
+    website: 'https://www.srmist.edu.in/',
+    eligibility: 'Admission to B.Tech is through SRMJEEE. Candidates must have passed 10+2 with PCM. For BCA/MCA, specific eligibility criteria and entrance tests apply.',
+    hostelInfo: 'SRMIST has extensive hostel facilities for students with various room sharing options. The hostels are equipped with gyms, recreational centers, and other amenities.'
   },
   {
     id: 'nit-calicut',
@@ -666,7 +720,9 @@ export const colleges: College[] = [
       overview: 'NIT Calicut is a prominent engineering college in Kerala with good academic standards.',
     },
     about: 'National Institute of Technology Calicut, formerly Regional Engineering College Calicut, is a public technical university and an institute of national importance governed by the NIT Act passed by the Parliament of India.',
-    website: 'https://nitc.ac.in/'
+    website: 'https://nitc.ac.in/',
+    eligibility: 'B.Tech admission requires qualifying JEE Main. For B.Arch, NATA score is needed. For MCA, NIMCET score is required. Candidates must pass 10+2 with required subjects.',
+    hostelInfo: 'The institute is fully residential and provides accommodation in its 13 hostels. Separate hostels are available for boys and girls.'
   },
   {
     id: 'iit-dhanbad',
@@ -689,7 +745,9 @@ export const colleges: College[] = [
       overview: 'Formerly Indian School of Mines, it excels in mining and earth sciences related engineering fields.',
     },
     about: 'Indian Institute of Technology (Indian School of Mines), Dhanbad is a public technical university located in Dhanbad, India. It has main focus on Mining and Mineral Engineering.',
-    website: 'https://www.iitism.ac.in/'
+    website: 'https://www.iitism.ac.in/',
+    eligibility: 'Admission to B.Tech programs is through JEE Advanced. Candidates must have at least 75% in 10+2 (PCM). GATE scores for M.Tech programs.',
+    hostelInfo: 'The institute provides residential facilities to all students. The hostels are equipped with all basic amenities and mess services for a comfortable stay.'
   },
   {
     id: 'manipal-mit',
@@ -714,7 +772,9 @@ export const colleges: College[] = [
       overview: 'MIT Manipal is a well-known private engineering college with a diverse student population.',
     },
     about: 'Manipal Institute of Technology is a private constituent institution of Manipal Academy of Higher Education that specializes in engineering. MIT contains 17 academic departments and awards undergraduate, graduate and post graduate degrees.',
-    website: 'https://manipal.edu/mit.html'
+    website: 'https://manipal.edu/mit.html',
+    eligibility: 'Admission to B.Tech is through the Manipal Entrance Test (MET). Candidates need to have passed 10+2 with Physics, Mathematics, and English. Specific criteria apply for BCA/MCA.',
+    hostelInfo: 'MIT Manipal offers hostel facilities to all students with well-furnished rooms and common recreational areas. Separate hostels for boys and girls.'
   },
   {
     id: 'coep-pune',
@@ -738,7 +798,9 @@ export const colleges: College[] = [
       overview: 'College of Engineering, Pune is one of the oldest engineering colleges in Asia with a strong reputation.',
     },
     about: 'COEP Technological University, formerly College of Engineering, Pune, is a unitary public university of the government of Maharashtra, situated in Pune, Maharashtra, India. Established in 1854, it is one of the oldest engineering colleges in Asia.',
-    website: 'https://www.coep.org.in/'
+    website: 'https://www.coep.org.in/',
+    eligibility: 'Admission to B.Tech programs is through the MHT-CET entrance exam. Candidates must have passed 10+2 with PCM. For MCA, MAH-MCA-CET score is required.',
+    hostelInfo: 'COEP provides hostel facilities for boys and girls. Due to limited capacity, admission is based on merit and other criteria. Hostels are equipped with necessary amenities.'
   },
   {
     id: 'iiit-hyderabad',
@@ -762,7 +824,9 @@ export const colleges: College[] = [
       overview: 'International Institute of Information Technology, Hyderabad is renowned for its strong focus on CS and IT related research and education.',
     },
     about: 'International Institute of Information Technology, Hyderabad is an autonomous university, founded as a not-for-profit public private partnership in 1998. It is one of the top Computer Science institutes in the country.',
-    website: 'https://www.iiit.ac.in/'
+    website: 'https://www.iiit.ac.in/',
+    eligibility: 'Admission to undergraduate programs is through various modes, including JEE Main scores, UGEE (conducted by IIIT-H), and Olympiads. Specific criteria vary by program.',
+    hostelInfo: 'IIIT Hyderabad is a residential institute and provides hostel accommodation to all students. The hostels are equipped with LAN, mess, and recreational facilities.'
   },
   {
     id: 'nit-kurukshetra',
@@ -786,7 +850,9 @@ export const colleges: College[] = [
       overview: 'NIT Kurukshetra is a well-established NIT in North India with good placements.',
     },
     about: 'National Institute of Technology, Kurukshetra is a public technical and research university located in Kurukshetra, Haryana, India. It is recognized as an Institute of National Importance by the Indian government.',
-    website: 'https://nitkkr.ac.in/'
+    website: 'https://nitkkr.ac.in/',
+    eligibility: 'B.Tech admissions are based on JEE Main rank. Candidates must have passed 10+2 with PCM. For MCA, NIMCET score is required.',
+    hostelInfo: 'The institute provides residential facilities with separate hostels for boys and girls. All hostels are equipped with necessary amenities.'
   },
   {
     id: 'mnnit-allahabad',
@@ -810,7 +876,9 @@ export const colleges: College[] = [
       overview: 'Motilal Nehru National Institute of Technology Allahabad is a prominent NIT with strong academic programs.',
     },
     about: 'Motilal Nehru National Institute of Technology Allahabad, formerly Motilal Nehru Regional Engineering College, is a public technical university located in Prayagraj, Uttar Pradesh, India.',
-    website: 'http://www.mnnit.ac.in/'
+    website: 'http://www.mnnit.ac.in/',
+    eligibility: 'Admission to B.Tech programs is through JEE Main rank. NIMCET score is required for MCA. Candidates must have passed 10+2 with PCM for engineering courses.',
+    hostelInfo: 'MNNIT is a residential institution with separate hostels for boys and girls, providing accommodation to all students with mess and other facilities.'
   },
   {
     id: 'svnit-surat',
@@ -834,7 +902,9 @@ export const colleges: College[] = [
       overview: 'Sardar Vallabhbhai National Institute of Technology, Surat is a respected NIT in Western India.',
     },
     about: 'Sardar Vallabhbhai National Institute of Technology, Surat, commonly known as National Institute of Technology, Surat, is an institute of national importance imparting higher education in engineering and technology.',
-    website: 'https://www.svnit.ac.in/'
+    website: 'https://www.svnit.ac.in/',
+    eligibility: 'B.Tech admissions are based on JEE Main scores. Candidates must have passed 10+2 with PCM. For MCA, NIMCET score is required.',
+    hostelInfo: 'SVNIT provides hostel accommodation to a majority of its students. There are 10 hostels with all necessary amenities for students.'
   },
   {
     id: 'iiit-bangalore',
@@ -857,7 +927,9 @@ export const colleges: College[] = [
       overview: 'International Institute of Information Technology Bangalore is known for its postgraduate programs and strong industry ties.',
     },
     about: 'International Institute of Information Technology Bangalore is a private technology university located in Bangalore, India. The university is a DNB and Deemed University, and is promoted by the Government of Karnataka and the IT industry.',
-    website: 'https://www.iiitb.ac.in/'
+    website: 'https://www.iiitb.ac.in/',
+    eligibility: 'Admission to the Integrated M.Tech program is based on JEE Main scores. For M.Sc and other postgraduate programs, the university conducts its own written tests and interviews.',
+    hostelInfo: 'IIITB provides well-furnished hostel accommodation for all its students. The campus has separate hostels for men and women with modern amenities.'
   },
   {
     id: 'nit-nagpur',
@@ -881,7 +953,9 @@ export const colleges: College[] = [
       overview: 'Visvesvaraya National Institute of Technology, Nagpur is a well-established NIT.',
     },
     about: 'Visvesvaraya National Institute of Technology Nagpur, also referred to as NIT Nagpur, is a public technical university located in the central Indian city of Nagpur, Maharashtra.',
-    website: 'https://vnit.ac.in/'
+    website: 'https://vnit.ac.in/',
+    eligibility: 'Admission to B.Tech programs is through JEE Main, and for B.Arch through JEE Main (Paper 2) and NATA. MCA admissions are through NIMCET.',
+    hostelInfo: 'VNIT provides hostel facilities for all its students. There are several hostel blocks for boys and girls with all necessary amenities.'
   },
   {
     id: 'iit-ropar-alt',
@@ -904,7 +978,9 @@ export const colleges: College[] = [
       overview: 'IIT Ropar offers specialized tracks and shows consistent growth in industry collaborations.',
     },
     about: 'Indian Institute of Technology Ropar, a newer IIT, is rapidly establishing itself with innovative programs and research focus. It is located in Punjab, India.',
-    website: 'https://www.iitrpr.ac.in/'
+    website: 'https://www.iitrpr.ac.in/',
+    eligibility: 'B.Tech admission requires qualifying in JEE Advanced. Candidates need a minimum of 75% in 10+2 with PCM. M.Tech admissions are based on GATE scores.',
+    hostelInfo: 'IIT Ropar is a fully residential institute with separate hostels for boys and girls. All hostels are equipped with modern amenities, including Wi-Fi and laundry services.'
   },
   {
     id: 'pec-chandigarh',
@@ -928,7 +1004,9 @@ export const colleges: College[] = [
       overview: 'Punjab Engineering College (Deemed to be University), Chandigarh, has a rich history and strong alumni network.',
     },
     about: 'Punjab Engineering College is a public technical institution in Chandigarh, India. Founded in 1921, it is one of the oldest engineering institutes in the country.',
-    website: 'https://pec.ac.in/'
+    website: 'https://pec.ac.in/',
+    eligibility: 'Admission to B.E. programs is through JEE Main rank via JoSAA/CSAB counselling. Candidates must have passed 10+2 with Physics and Mathematics.',
+    hostelInfo: 'PEC has seven hostels for boys and three for girls. The hostels are equipped with essential amenities, including mess facilities and recreational areas.'
   },
   {
     id: 'iiit-allahabad',
@@ -952,7 +1030,9 @@ export const colleges: College[] = [
       overview: 'Indian Institute of Information Technology, Allahabad focuses on IT and related areas with excellent placement records.',
     },
     about: 'Indian Institute of Information Technology, Allahabad is a public university located in Jhalwa, Prayagraj district, in Uttar Pradesh state in India. It is one of the twenty-five IIITs listed by the MHRD.',
-    website: 'https://www.iiita.ac.in/'
+    website: 'https://www.iiita.ac.in/',
+    eligibility: 'Admission to B.Tech programs is based on JEE Main rank. Candidates must have passed 10+2 with PCM. Admission to postgraduate courses is through entrance tests.',
+    hostelInfo: 'The institute is fully residential, with separate hostel complexes for boys and girls. All hostels are equipped with LAN, mess, and recreational facilities.'
   },
   {
     id: 'nit-jalandhar',
@@ -976,7 +1056,9 @@ export const colleges: College[] = [
       overview: 'Dr. B. R. Ambedkar National Institute of Technology Jalandhar is a public engineering university located in Jalandhar, Punjab, India.',
     },
     about: 'Dr. B. R. Ambedkar National Institute of Technology Jalandhar, formerly Regional Engineering College Jalandhar, is a public technical university located in Jalandhar, Punjab, India.',
-    website: 'https://www.nitj.ac.in/'
+    website: 'https://www.nitj.ac.in/',
+    eligibility: 'B.Tech admissions are based on JEE Main rank. Candidates must have passed 10+2 with PCM. NIMCET score is required for MCA admissions.',
+    hostelInfo: 'NIT Jalandhar provides residential facilities with 10 boys\' hostels and 3 girls\' hostels, all equipped with necessary amenities.'
   },
   {
     id: 'daiict-gandhinagar',
@@ -1001,7 +1083,9 @@ export const colleges: College[] = [
       overview: 'Dhirubhai Ambani Institute of Information and Communication Technology is known for its specialized programs in ICT.',
     },
     about: 'Dhirubhai Ambani Institute of Information and Communication Technology is a private self-financed university located in Gandhinagar, Gujarat, India. It is named after the Indian entrepreneur and philanthropist Dhirubhai Ambani.',
-    website: 'https://www.daiict.ac.in/'
+    website: 'https://www.daiict.ac.in/',
+    eligibility: 'Admission to B.Tech programs is based on JEE Main scores. Specific criteria apply for other undergraduate and postgraduate programs.',
+    hostelInfo: 'DA-IICT is a fully residential campus. All students are required to stay in the hostels. Separate hostels for boys and girls are available with all modern facilities.'
   },
   {
     id: 'nit-silchar',
@@ -1025,7 +1109,9 @@ export const colleges: College[] = [
       overview: 'National Institute of Technology Silchar is an Institute of National Importance located in Silchar, Assam, India.',
     },
     about: 'National Institute of Technology Silchar is one of the 31 NITs of India and was established in 1967 as a Regional Engineering College in Silchar. In 2002, it was upgraded to the status of National Institute of Technology.',
-    website: 'http://www.nits.ac.in/'
+    website: 'http://www.nits.ac.in/',
+    eligibility: 'Admission to B.Tech programs is through JEE Main rank. NIMCET score is required for MCA. Candidates must have passed 10+2 with PCM for engineering.',
+    hostelInfo: 'NIT Silchar provides hostel accommodation to its students. There are 9 boys\' hostels and 3 girls\' hostels, equipped with necessary amenities.'
   },
   {
     id: 'nit-jaipur',
@@ -1049,7 +1135,9 @@ export const colleges: College[] = [
       overview: 'Malaviya National Institute of Technology Jaipur is a public technical university located in Jaipur, India with a focus on science, engineering and management.',
     },
     about: 'Malaviya National Institute of Technology Jaipur is a public technical university located in Jaipur, India. Established in 1963 as Malaviya Regional Engineering College Jaipur, it became a National Institute of Technology in 2002.',
-    website: 'https://www.mnit.ac.in/'
+    website: 'https://www.mnit.ac.in/',
+    eligibility: 'B.Tech admissions are based on JEE Main scores, while B.Arch admissions require JEE Main (Paper 2). For MCA, NIMCET score is required.',
+    hostelInfo: 'MNIT Jaipur provides on-campus hostel facilities for both male and female students, with a capacity of over 5000 students.'
   },
   {
     id: 'bits-hyderabad',
@@ -1073,7 +1161,9 @@ export const colleges: College[] = [
       overview: 'BITS Pilani, Hyderabad Campus offers similar quality education and placement opportunities as the Pilani campus.',
     },
     about: 'Birla Institute of Technology & Science, Pilani – Hyderabad Campus is a private deemed university campus located in Hyderabad, Telangana, India. It is one of the four constituent campuses of BITS Pilani.',
-    website: 'https://www.bits-pilani.ac.in/hyderabad/'
+    website: 'https://www.bits-pilani.ac.in/hyderabad/',
+    eligibility: 'Admission to integrated first-degree programmes is through the BITSAT exam. Candidates must have passed 10+2 with Physics, Chemistry, and Mathematics.',
+    hostelInfo: 'The Hyderabad campus is fully residential, providing hostel accommodation for all students. The hostels are well-equipped with modern amenities and mess facilities.'
   },
   {
     id: 'nit-bhopal',
@@ -1097,7 +1187,9 @@ export const colleges: College[] = [
       overview: 'Maulana Azad National Institute of Technology Bhopal is an Institute of National Importance under Ministry of Education, Government of India.',
     },
     about: 'Maulana Azad National Institute of Technology Bhopal, also known as NIT Bhopal, is a public technical university located in Bhopal, Madhya Pradesh, India. It is part of the group of NITs.',
-    website: 'http://www.manit.ac.in/'
+    website: 'http://www.manit.ac.in/',
+    eligibility: 'B.Tech admissions are based on JEE Main rank. For B.Arch and B.Plan, specific papers of JEE Main are required. MCA admissions are through NIMCET.',
+    hostelInfo: 'MANIT Bhopal has 11 hostels for boys and 2 for girls. The institute provides residential facilities to its students with mess and other amenities.'
   },
   {
     id: 'iiit-gwalior',
@@ -1121,7 +1213,9 @@ export const colleges: College[] = [
       overview: 'Indian Institute of Information Technology and Management Gwalior offers unique integrated programs in IT and Management.',
     },
     about: 'Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior, commonly known as the Indian Institute of Information Technology and Management Gwalior, is an autonomous institute set up by Ministry of Human Resource Development, Government of India.',
-    website: 'https://www.iiitm.ac.in/'
+    website: 'https://www.iiitm.ac.in/',
+    eligibility: 'Admission to the 5-year Integrated Program (B.Tech + M.Tech/MBA) is through JEE Main rank. Candidates must have passed 10+2 with PCM.',
+    hostelInfo: 'The institute is fully residential, with four hostels for boys and one for girls. All hostels are equipped with LAN connectivity, mess, and common rooms.'
   },
   {
     id: 'nit-durgapur',
@@ -1145,7 +1239,9 @@ export const colleges: College[] = [
       overview: 'National Institute of Technology Durgapur is an institute of national importance in Durgapur, West Bengal, India.',
     },
     about: 'National Institute of Technology Durgapur, formerly Regional Engineering College, Durgapur, is a public technical university in the city of Durgapur in West Bengal, India. It is among the oldest NITs.',
-    website: 'https://nitdgp.ac.in/'
+    website: 'https://nitdgp.ac.in/',
+    eligibility: 'Admission to B.Tech programs is through JEE Main rank. NIMCET score is required for MCA. Candidates must have passed 10+2 with PCM.',
+    hostelInfo: 'NIT Durgapur provides residential facilities to students with 7 boys\' hostels and 3 girls\' hostels, all equipped with necessary amenities.'
   },
   {
     id: 'dtu-delhi',
@@ -1169,7 +1265,9 @@ export const colleges: College[] = [
       overview: 'Delhi Technological University, formerly Delhi College of Engineering, is a state university in New Delhi, India.',
     },
     about: 'Delhi Technological University, formerly known as the Delhi College of Engineering, is a state university in New Delhi, India. It was established in 1941 as Delhi Polytechnic.',
-    website: 'http://dtu.ac.in/'
+    website: 'http://dtu.ac.in/',
+    eligibility: 'Admission to B.Tech programs is based on JEE Main rank through JAC Delhi counselling. Candidates must have passed 10+2 with PCM.',
+    hostelInfo: 'DTU has well-established hostels for boys and girls, providing a comfortable and conducive environment for learning.'
   },
   {
     id: 'nit-patna',
@@ -1193,7 +1291,9 @@ export const colleges: College[] = [
       overview: 'National Institute of Technology Patna is the 18th National Institute of Technology created by the Ministry of H.R.D. Government of India after rechristening the erstwhile Bihar College of Engineering Patna.',
     },
     about: 'National Institute of Technology Patna is a public technical university located in Patna, Bihar, India. It was renamed from Bihar College of Engineering Patna in 2004. It is an Institute of National Importance.',
-    website: 'https://www.nitp.ac.in/'
+    website: 'https://www.nitp.ac.in/',
+    eligibility: 'Admission to B.Tech is based on JEE Main rank, and for B.Arch, JEE Main (Paper 2) is required. For MCA, NIMCET score is considered.',
+    hostelInfo: 'NIT Patna provides hostel facilities for its students. Allotment is based on availability and other criteria. The hostels have basic amenities.'
   }
 ];
 

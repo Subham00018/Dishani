@@ -10,7 +10,7 @@ import type { College, CourseInfo } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Award, BookOpenCheck, Briefcase, DollarSign, ExternalLink, Globe, MapPin, Users, LocateIcon, Banknote } from 'lucide-react';
+import { ArrowLeft, Award, BookOpenCheck, Briefcase, DollarSign, ExternalLink, Globe, MapPin, Users, LocateIcon, Banknote, ShieldCheck, BedDouble } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 
 export default function CollegeDetailsPage() {
@@ -159,6 +159,24 @@ export default function CollegeDetailsPage() {
                 ) : (
                     <p className="text-muted-foreground">Details on specific scholarships are typically available on the college's official website or admissions office.</p>
                 )}
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center"><ShieldCheck className="mr-3 h-6 w-6 text-primary" />Eligibility Criteria</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">{college.eligibility}</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center"><BedDouble className="mr-3 h-6 w-6 text-primary" />Hostel Facility</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">{college.hostelInfo}</p>
               </CardContent>
             </Card>
 
