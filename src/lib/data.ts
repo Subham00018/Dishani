@@ -106,32 +106,6 @@ export const colleges: College[] = [
     hostelInfo: 'IIT Madras has 22 hostels and provides accommodation to all its students. The hostels are equipped with dining halls, laundry services, and recreational facilities.'
   },
   {
-    id: 'bits-pilani',
-    name: 'BITS Pilani',
-    logoUrl: 'https://placehold.co/100x100.png',
-    campusPhotoUrl: 'https://placehold.co/600x400.png',
-    dataAiHint: 'private university',
-    location: 'Pilani, Rajasthan',
-    ranking: 10,
-    feeStructure: 'Approx. ₹5.0 Lakhs per year. Fees vary by program.',
-    scholarships: ['Merit Scholarships', 'Merit-cum-Need Scholarships'],
-    courses: [
-      { name: 'Computer Science', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
-      { name: 'Electronics & Communication', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
-      { name: 'Mechanical Engineering', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
-      { name: 'Pharmacy', fee: 'Approx. ₹4.5 Lakhs per year (B.Pharm)' },
-      { name: 'Masters in Computer Applications', fee: 'Contact university for MCA fees' }
-    ],
-    placements: {
-      averagePackage: '₹18 LPA',
-      overview: 'BITS Pilani offers excellent placements across its campuses, with a strong alumni network.',
-    },
-    about: 'Birla Institute of Technology & Science, Pilani is a private deemed university in Pilani, India. It focuses primarily on higher education and research in engineering and sciences.',
-    website: 'https://www.bits-pilani.ac.in/',
-    eligibility: 'Admission to integrated first-degree programmes is through the BITSAT exam. Candidates need to have passed 10+2 with Physics, Chemistry, and Mathematics/Biology.',
-    hostelInfo: 'BITS Pilani is a fully residential institute. It provides hostel accommodation for all students, with separate hostels for boys and girls, featuring mess services and common areas.'
-  },
-  {
     id: 'iit-kanpur',
     name: 'IIT Kanpur',
     logoUrl: 'https://placehold.co/100x100.png',
@@ -258,13 +232,64 @@ export const colleges: College[] = [
     hostelInfo: 'NIT Trichy has 24 hostels providing accommodation to over 9,000 students. Separate hostels are available for boys and girls with all necessary facilities.'
   },
   {
+    id: 'jnu-delhi',
+    name: 'Jawaharlal Nehru University (JNU)',
+    logoUrl: 'https://placehold.co/100x100.png',
+    campusPhotoUrl: 'https://placehold.co/600x400.png',
+    dataAiHint: 'university brick building',
+    location: 'New Delhi, Delhi',
+    ranking: 10,
+    feeStructure: 'Approx. ₹1,300 - ₹2,000 per year for most courses. Highly subsidized.',
+    scholarships: ['Merit-cum-Means Scholarship', 'JRF/SRF Fellowships'],
+    courses: [
+        { name: 'B.Tech in Computer Science', fee: 'Approx. ₹10,000 per semester' },
+        { name: 'B.Tech in Electronics & Communication', fee: 'Approx. ₹10,000 per semester' },
+        { name: 'M.A. in Economics', fee: 'Approx. ₹1,300 per year' },
+        { name: 'M.A. in Political Science', fee: 'Approx. ₹1,300 per year' },
+        { name: 'Masters in Computer Applications', fee: 'Approx. ₹1,300 per year' }
+    ],
+    placements: {
+      overview: 'JNU has a dedicated placement cell. Placements are strong in academia, research, civil services, and increasingly in the corporate sector for professional courses.',
+    },
+    about: 'Jawaharlal Nehru University is a public central university located in New Delhi, India. It was established in 1969 and is a world-renowned centre for teaching and research, known for its focus on social sciences, international studies, and sciences.',
+    website: 'https://www.jnu.ac.in/',
+    eligibility: 'Admission to most courses is through the CUET (Common University Entrance Test). For B.Tech, admission is through JoSAA counselling based on JEE Main rank.',
+    hostelInfo: 'JNU is a fully residential university with extensive hostel facilities for its students at highly subsidized rates. It has 18 hostels for boys and girls and one complex for married students.'
+  },
+  {
+    id: 'bits-pilani',
+    name: 'BITS Pilani',
+    logoUrl: 'https://placehold.co/100x100.png',
+    campusPhotoUrl: 'https://placehold.co/600x400.png',
+    dataAiHint: 'private university',
+    location: 'Pilani, Rajasthan',
+    ranking: 11,
+    feeStructure: 'Approx. ₹5.0 Lakhs per year. Fees vary by program.',
+    scholarships: ['Merit Scholarships', 'Merit-cum-Need Scholarships'],
+    courses: [
+      { name: 'Computer Science', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
+      { name: 'Electronics & Communication', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
+      { name: 'Mechanical Engineering', fee: 'Approx. ₹5.0 Lakhs per year (B.E.)' },
+      { name: 'Pharmacy', fee: 'Approx. ₹4.5 Lakhs per year (B.Pharm)' },
+      { name: 'Masters in Computer Applications', fee: 'Contact university for MCA fees' }
+    ],
+    placements: {
+      averagePackage: '₹18 LPA',
+      overview: 'BITS Pilani offers excellent placements across its campuses, with a strong alumni network.',
+    },
+    about: 'Birla Institute of Technology & Science, Pilani is a private deemed university in Pilani, India. It focuses primarily on higher education and research in engineering and sciences.',
+    website: 'https://www.bits-pilani.ac.in/',
+    eligibility: 'Admission to integrated first-degree programmes is through the BITSAT exam. Candidates need to have passed 10+2 with Physics, Chemistry, and Mathematics/Biology.',
+    hostelInfo: 'BITS Pilani is a fully residential institute. It provides hostel accommodation for all students, with separate hostels for boys and girls, featuring mess services and common areas.'
+  },
+  {
     id: 'jadavpur-university',
     name: 'Jadavpur University',
     logoUrl: 'https://placehold.co/100x100.png',
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'old university',
     location: 'Kolkata, West Bengal',
-    ranking: 11,
+    ranking: 12,
     feeStructure: 'Approx. ₹10,000 - ₹30,000 per year (Highly Subsidized). Fees vary significantly by course.',
     scholarships: ['State Government scholarships, University specific aids'],
     courses: [
@@ -291,7 +316,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'modern campus',
     location: 'Vellore, Tamil Nadu',
-    ranking: 12,
+    ranking: 13,
     feeStructure: 'Approx. ₹1.98 Lakhs (Group A) to ₹3.95 Lakhs (Group B) per year for B.Tech. Other courses vary.',
     scholarships: ['GV School Development Programme (GVSDP)', 'STARS scheme'],
     courses: [
@@ -320,7 +345,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'coastal campus',
     location: 'Mangalore, Karnataka',
-    ranking: 13,
+    ranking: 14,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Various central and state government scholarships'],
     courses: [
@@ -346,7 +371,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'state university',
     location: 'Chennai, Tamil Nadu',
-    ranking: 14,
+    ranking: 15,
     feeStructure: 'Approx. ₹50,000 - ₹60,000 per year (Govt. Quota for B.E./B.Tech). Fees vary by course and college type.',
     scholarships: ['BC/MBC Scholarships, SC/ST Scholarships'],
     courses: [
@@ -372,7 +397,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'new iit campus',
     location: 'Hyderabad, Telangana',
-    ranking: 15,
+    ranking: 16,
     feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech). Other courses may vary.',
     scholarships: ['Institute SC/ST Scholarship, MCM scholarship'],
     courses: [
@@ -397,7 +422,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'historic nit',
     location: 'Warangal, Telangana',
-    ranking: 16,
+    ranking: 17,
     feeStructure: 'Approx. ₹1.3 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Scholarships for SC/ST/OBC/Minority students'],
     courses: [
@@ -423,7 +448,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'modern architecture',
     location: 'Indore, Madhya Pradesh',
-    ranking: 17,
+    ranking: 18,
     feeStructure: 'Approx. ₹2.3 Lakhs per year (B.Tech).',
     scholarships: ['Merit-cum-Means Scholarship, Central Sector Scholarships'],
     courses: [
@@ -448,7 +473,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'historic university',
     location: 'Varanasi, Uttar Pradesh',
-    ranking: 18,
+    ranking: 19,
     feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech).',
     scholarships: ['Various internal and external scholarships'],
     courses: [
@@ -473,7 +498,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'chemical technology',
     location: 'Mumbai, Maharashtra',
-    ranking: 19,
+    ranking: 20,
     feeStructure: 'Approx. ₹85,000 per year (B.Tech). Varies for other courses.',
     scholarships: ['Merit based, Industry sponsored scholarships'],
     courses: [
@@ -498,7 +523,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'new infrastructure',
     location: 'Rupnagar, Punjab',
-    ranking: 20,
+    ranking: 21,
     feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech).',
     scholarships: ['MCM Scholarship, Institute Free Studentship'],
     courses: [
@@ -523,7 +548,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'developing campus',
     location: 'Patna, Bihar',
-    ranking: 21,
+    ranking: 22,
     feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech).',
     scholarships: ['Various government scholarships'],
     courses: [
@@ -548,7 +573,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'historic engineering',
     location: 'Howrah, West Bengal',
-    ranking: 22,
+    ranking: 23,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech).',
     scholarships: ['Merit-cum-Means, Institute specific'],
     courses: [
@@ -573,7 +598,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'industrial area campus',
     location: 'Rourkela, Odisha',
-    ranking: 23,
+    ranking: 24,
     feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Merit and need-based scholarships'],
     courses: [
@@ -599,7 +624,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'sustainable campus',
     location: 'Gandhinagar, Gujarat',
-    ranking: 24,
+    ranking: 25,
     feeStructure: 'Approx. ₹2.3 Lakhs per year (B.Tech).',
     scholarships: ['Financial aid provided by the institute'],
     courses: [
@@ -624,7 +649,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'private engineering college',
     location: 'Patiala, Punjab',
-    ranking: 25,
+    ranking: 26,
     feeStructure: 'Approx. ₹4.5 Lakhs per year (B.E./B.Tech). BCA/MCA fees differ.',
     scholarships: ['Merit based scholarships'],
     courses: [
@@ -651,7 +676,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'spiritual campus',
     location: 'Coimbatore, Tamil Nadu',
-    ranking: 26,
+    ranking: 27,
     feeStructure: 'Approx. ₹3.5 Lakhs per year (B.Tech). BCA/MCA fees may differ.',
     scholarships: ['Amrita Entrance Examination based scholarships'],
     courses: [
@@ -678,7 +703,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'large private campus',
     location: 'Chennai, Tamil Nadu',
-    ranking: 27,
+    ranking: 28,
     feeStructure: 'Approx. ₹2.5 - ₹4.5 Lakhs per year (B.Tech depending on specialization). BCA/MCA fees differ.',
     scholarships: ['SRMJEEE Rank based, Socio-economic scholarships'],
     courses: [
@@ -705,7 +730,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'kerala campus',
     location: 'Kozhikode, Kerala',
-    ranking: 28,
+    ranking: 29,
     feeStructure: 'Approx. ₹1.4 Lakhs per year (B.Tech). B.Arch/MCA fees differ.',
     scholarships: ['National and State level scholarships'],
     courses: [
@@ -731,7 +756,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'mining institute',
     location: 'Dhanbad, Jharkhand',
-    ranking: 29,
+    ranking: 30,
     feeStructure: 'Approx. ₹2.2 Lakhs per year (B.Tech).',
     scholarships: ['Merit-cum-Means, Alumni scholarships'],
     courses: [
@@ -756,7 +781,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'international campus feel',
     location: 'Manipal, Karnataka',
-    ranking: 30,
+    ranking: 31,
     feeStructure: 'Approx. ₹4.0 Lakhs per year (B.Tech). BCA/MCA fees differ.',
     scholarships: ['Merit-based scholarships for top rankers in MET'],
     courses: [
@@ -783,7 +808,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'historic pune college',
     location: 'Pune, Maharashtra',
-    ranking: 31,
+    ranking: 32,
     feeStructure: 'Approx. ₹90,000 per year (B.Tech). MCA fees differ.',
     scholarships: ['Government of Maharashtra scholarships'],
     courses: [
@@ -809,7 +834,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'it focused institute',
     location: 'Hyderabad, Telangana',
-    ranking: 32,
+    ranking: 33,
     feeStructure: 'Approx. ₹3.6 Lakhs per year. Fees vary by program specialization.',
     scholarships: ['Pratibha scholarship (State govt.), Financial assistance schemes'],
     courses: [
@@ -835,7 +860,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'north india nit',
     location: 'Kurukshetra, Haryana',
-    ranking: 33,
+    ranking: 34,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Central and State Government schemes'],
     courses: [
@@ -861,7 +886,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'up nit campus',
     location: 'Prayagraj, Uttar Pradesh',
-    ranking: 34,
+    ranking: 35,
     feeStructure: 'Approx. ₹1.6 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Various government scholarships for reserved categories'],
     courses: [
@@ -887,7 +912,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'gujarat nit campus',
     location: 'Surat, Gujarat',
-    ranking: 35,
+    ranking: 36,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech). MCA fees differ.',
     scholarships: ['Scholarships for meritorious and economically weaker students'],
     courses: [
@@ -913,7 +938,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'tech hub institute',
     location: 'Bengaluru, Karnataka',
-    ranking: 36,
+    ranking: 37,
     feeStructure: 'Approx. ₹5 Lakhs per year (Integrated M.Tech). Fees vary significantly by specific program.',
     scholarships: ['Merit-based scholarships, Industry sponsored scholarships'],
     courses: [
@@ -938,7 +963,7 @@ export const colleges: College[] = [
     campusPhotoUrl: 'https://placehold.co/600x400.png',
     dataAiHint: 'maharashtra nit campus',
     location: 'Nagpur, Maharashtra',
-    ranking: 37,
+    ranking: 38,
     feeStructure: 'Approx. ₹1.5 Lakhs per year (B.Tech). B.Arch/MCA fees differ.',
     scholarships: ['Central and State scholarships'],
     courses: [
@@ -956,31 +981,6 @@ export const colleges: College[] = [
     website: 'https://vnit.ac.in/',
     eligibility: 'Admission to B.Tech programs is through JEE Main, and for B.Arch through JEE Main (Paper 2) and NATA. MCA admissions are through NIMCET.',
     hostelInfo: 'VNIT provides hostel facilities for all its students. There are several hostel blocks for boys and girls with all necessary amenities.'
-  },
-  {
-    id: 'iit-ropar-alt',
-    name: 'IIT Ropar (Alternate Entry)',
-    logoUrl: 'https://placehold.co/100x100.png',
-    campusPhotoUrl: 'https://placehold.co/600x400.png',
-    dataAiHint: 'punjab iit campus',
-    location: 'Rupnagar, Punjab',
-    ranking: 38,
-    feeStructure: 'Approx. ₹2.1 Lakhs per year (B.Tech).',
-    scholarships: ['MCM Scholarship, Institute Free Studentship'],
-    courses: [
-      { name: 'Civil Engineering', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
-      { name: 'Electrical Engineering (VLSI Design and Technology)', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
-      { name: 'Computer Science and Engineering (AI)', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' },
-      { name: 'Mechanical Engineering (Manufacturing)', fee: 'Approx. ₹2.1 Lakhs per year (B.Tech)' }
-    ],
-    placements: {
-      averagePackage: '₹16.5 LPA',
-      overview: 'IIT Ropar offers specialized tracks and shows consistent growth in industry collaborations.',
-    },
-    about: 'Indian Institute of Technology Ropar, a newer IIT, is rapidly establishing itself with innovative programs and research focus. It is located in Punjab, India.',
-    website: 'https://www.iitrpr.ac.in/',
-    eligibility: 'B.Tech admission requires qualifying in JEE Advanced. Candidates need a minimum of 75% in 10+2 with PCM. M.Tech admissions are based on GATE scores.',
-    hostelInfo: 'IIT Ropar is a fully residential institute with separate hostels for boys and girls. All hostels are equipped with modern amenities, including Wi-Fi and laundry services.'
   },
   {
     id: 'pec-chandigarh',
@@ -1323,7 +1323,7 @@ export const entranceExams: EntranceExam[] = [
     description: 'For admission to NITs, IIITs, and other Centrally Funded Technical Institutions (CFTIs), and as eligibility for JEE Advanced.',
     bannerImageUrl: 'https://placehold.co/800x300.png',
     dataAiHint: 'students writing exam',
-    relevantColleges: ['nit-trichy', 'nit-surathkal', 'nit-warangal', 'nit-calicut', 'nit-rourkela', 'mnnit-allahabad', 'svnit-surat', 'nit-kurukshetra', 'nit-jaipur', 'nit-bhopal', 'nit-nagpur', 'nit-jalandhar', 'nit-silchar', 'nit-durgapur', 'nit-patna', 'iiit-hyderabad', 'iiit-bangalore', 'iiit-allahabad', 'iiit-gwalior', 'pec-chandigarh', 'dtu-delhi', 'iiest-shibpur']
+    relevantColleges: ['nit-trichy', 'nit-surathkal', 'nit-warangal', 'nit-calicut', 'nit-rourkela', 'mnnit-allahabad', 'svnit-surat', 'nit-kurukshetra', 'nit-jaipur', 'nit-bhopal', 'nit-nagpur', 'nit-jalandhar', 'nit-silchar', 'nit-durgapur', 'nit-patna', 'iiit-hyderabad', 'iiit-bangalore', 'iiit-allahabad', 'iiit-gwalior', 'pec-chandigarh', 'dtu-delhi', 'iiest-shibpur', 'jnu-delhi']
   },
   {
     id: 'gate',
