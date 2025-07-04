@@ -22,7 +22,7 @@ export default function DashboardHomePage() {
 
     const coursesSet = new Set<string>();
     colleges.forEach(college => {
-      college.courses.forEach(course => coursesSet.add(course));
+      college.courses.forEach(course => coursesSet.add(course.name));
     });
     setUniqueCourses(coursesSet.size);
 
@@ -106,9 +106,7 @@ export default function DashboardHomePage() {
               <CollegeCard
                 key={nit.id}
                 college={nit}
-                isSelectedForCompare={false}
-                onCompareSelect={() => {}} // No-op for home page
-                compareDisabled={true} // Disable compare selection from home
+                showCompareButton={false}
               />
             ))}
           </div>

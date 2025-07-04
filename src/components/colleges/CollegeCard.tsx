@@ -9,12 +9,13 @@ import { Badge } from '@/components/ui/badge';
 
 interface CollegeCardProps {
   college: College;
-  isSelectedForCompare: boolean;
-  onCompareSelect: (collegeId: string) => void;
-  compareDisabled: boolean;
+  isSelectedForCompare?: boolean;
+  onCompareSelect?: (collegeId: string) => void;
+  compareDisabled?: boolean;
+  showCompareButton?: boolean;
 }
 
-export function CollegeCard({ college, isSelectedForCompare, onCompareSelect, compareDisabled }: CollegeCardProps) {
+export function CollegeCard({ college, isSelectedForCompare = false, onCompareSelect = () => {}, compareDisabled = false, showCompareButton = true }: CollegeCardProps) {
   return (
     <Card className="flex flex-col h-full overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
       <CardHeader className="p-0">
@@ -83,7 +84,7 @@ export function CollegeCard({ college, isSelectedForCompare, onCompareSelect, co
             View Details <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
-        <Button
+        {showCompareButton && <Button
           variant={isSelectedForCompare ? "default" : "secondary"}
           size="sm"
           onClick={() => onCompareSelect(college.id)}
@@ -92,7 +93,7 @@ export function CollegeCard({ college, isSelectedForCompare, onCompareSelect, co
         >
           <CheckSquare className="mr-2 h-4 w-4" />
           {isSelectedForCompare ? 'Selected' : 'Compare'}
-        </Button>
+        </Button>}
       </CardFooter>
     </Card>
   );
